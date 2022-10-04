@@ -15,6 +15,7 @@ import DropDown from "./components/DropDown"
 import Navbar from "./components/Navbar"
 import Navigation from "./components/Navigation"
 import Sidebar from "./components/Sidebar"
+import "./app.css"
 
 
 
