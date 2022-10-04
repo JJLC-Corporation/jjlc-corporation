@@ -1,6 +1,7 @@
 import React from "react"
 import Header from "./components/Header"
 import Home from "./pages/Home"
+import AboutUs from "./pages/AboutUs"
 import NotFound from "./pages/NotFound"
 import Resources from "./pages/Resources"
 import WorkoutEdit from "./pages/WorkoutEdit"
@@ -26,6 +27,7 @@ const App = (props) => {
     <Route exact path="/workoutindex" element={<WorkoutIndex />} />
     <Route exact path="/workoutnew" element={<WorkoutNew />} />
     <Route exact path="/resources" element={<Resources />} />
+    <Route exact path="/aboutus"  element={<AboutUs />} />
     </Routes>
     <Footer />
   </BrowserRouter>

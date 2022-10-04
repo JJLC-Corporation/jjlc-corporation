@@ -61,8 +61,8 @@ const Navigation = ({
         )}
         {!logged_in && (
             <NavItem>
-                <NavLink to="/" className="nav-link">
-                    <Button></Button>
+                <NavLink to="/aboutus" className="nav-link">
+                    <Button>About Us</Button>
                 </NavLink>
             </NavItem>
         )}
