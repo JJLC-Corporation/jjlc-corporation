@@ -1,18 +1,34 @@
 import React from "react"
 import Header from "./components/Header"
+import Home from "./pages/Home"
+import NotFound from "./pages/NotFound"
+import Resources from "./pages/Resources"
+import WorkoutEdit from "./pages/WorkoutEdit"
+import WorkoutIndex from "./pages/WorkoutIndex"
+import WorkoutNew from "./pages/WorkoutNew"
+import WorkoutShow from "./pages/WorkoutShow"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Footer from "./components/Footer"
+import DropDown from "./components/DropDown"
+import Navbar from "./components/Navbar"
+import Navigation from "./components/Navigation"
+import Sidebar from "./components/Sidebar"
 
-const App = ({
-  logged_in,
-  current_user,
-  new_user_route,
-  sign_in_route,
-  sign_out_route
-}) => {
+
+
+const App = (props) => {
 
   return (
-    <>
-  <h1>LIFT APP</h1>
-  </>
+    <BrowserRouter>
+    <Header {...props} />
+    <Routes>
+    <Route exact path="/" element={<Home />} />
+    <Route exact path="/workoutindex" element={<WorkoutIndex />} />
+    <Route exact path="/workoutnew" element={<WorkoutNew />} />
+    <Route exact path="/resources" element={<Resources />} />
+    </Routes>
+    <Footer />
+  </BrowserRouter>
   )
 }
 
