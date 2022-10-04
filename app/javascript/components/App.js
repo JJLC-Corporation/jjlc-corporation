@@ -3,6 +3,7 @@ import Header from "./components/Header"
 import Home from "./pages/Home"
 import AboutUs from "./pages/AboutUs"
 import NotFound from "./pages/NotFound"
+import Dashboard from "./pages/Dashboard"
 import Resources from "./pages/Resources"
 import WorkoutEdit from "./pages/WorkoutEdit"
 import WorkoutIndex from "./pages/WorkoutIndex"
@@ -23,6 +24,7 @@ const App = (props) => {
     <BrowserRouter>
     <Header {...props} />
     <Routes>
+    <Route exact path ="/dashboard" element={<Dashboard />} />
     <Route exact path="/" element={<Home />} />
     <Route exact path="/workoutindex" element={<WorkoutIndex />} />
     <Route exact path="/workoutnew" element={<WorkoutNew />} />
