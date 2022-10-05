@@ -12,22 +12,22 @@ RSpec.describe Workout, type: :model do
     expect(workout.errors[:name]).to_not be_empty
   end
 
-  # it'should have a valid set_reps' do
-  #   workout = user.workouts.create(
-  #     name: 'Joyce',
-  #     weight: 155
-  #   )
+  it'should have a valid set_reps' do
+    workout = user.workouts.create(
+      name: 'Joyce',
+      weight: 155
+    )
 
-  #   expect(workout.errors[:set_reps]).to_not be_empty
-  # end
+    expect(workout.errors[:set_reps]).to_not be_empty
+  end
 
-  # it'should have a valid weight' do
-  #   workout = user.workouts.create(
-  #     name: 'Luis',
-  #     set_reps: '3x10'
-  #   )
+  it'should have a valid weight' do
+    workout = user.workouts.create(
+      name: 'Luis',
+      set_reps: '3x10'
+    )
 
-  #   expect(workout.errors[:weight]).to_not be_empty
-  # end
+    expect(workout.errors[:weight]).to_not be_empty
+  end
 
 end
