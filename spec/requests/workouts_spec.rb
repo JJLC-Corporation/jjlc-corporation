@@ -25,5 +25,63 @@ describe "POST / create" do
       expect(json[:name]).to eq("Bench press")
       expect(json[:set_reps]).to eq("5x5")
     end
+
+    it "doesnt create a workout without a name" do
+      workout_params = {
+        workout: {
+          set_reps: "5x5",
+          weight: 150,
+          user_id: user.id,
+        }
+      }
+      post '/workouts', params: workout_params
+
+      expect(response.status).to eq 422
+      json = JSON.parse(response.body)
+      expect(json['name']).to include "can't be blank"
+    end
+
+    it "doesnt create a workout without a set_reps" do
+      workout_params = {
+        workout: {
+          name: "Bench press",
+          weight: 150,
+          user_id: user.id,
+        }
+      }
+      post '/workouts', params: workout_params
+
+      expect(response.status).to eq 422
+      json = JSON.parse(response.body)
+      expect(json['set_reps']).to include "can't be blank"
+    end
+
+    it "doesnt create a workout without a weight" do
+      workout_params = {
+        workout: {
+          name: "Bench press",
+          set_reps: '3x5',
+          user_id: user.id,
+        }
+      }
+      post '/workouts', params: workout_params
+
+      expect(response.status).to eq 422
+      json = JSON.parse(response.body)
+      expect(json['weight']).to include "can't be blank"
+    end
+
+    it "doesnt create a workout without a user" do
+      workout_params = {
+        workout: {
+          name: "Bench press",
+          set_reps: '3x5',
+          weight: 155,
+        }
+      }
+      post '/workouts', params: workout_params
+
+      expect(response.status).to eq 422
+    end
   end
 end
