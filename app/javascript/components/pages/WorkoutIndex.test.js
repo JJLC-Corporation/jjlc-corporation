@@ -1,7 +1,7 @@
 import React from 'react'
 import { screen, render } from '@testing-library/react'
 import { BrowserRouter } from "react-router-dom"
-import WorkoutIndex from './workoutindex'
+import WorkoutIndex from './WorkoutIndex'
 
 
 describe('WorkoutIndex', () => {
