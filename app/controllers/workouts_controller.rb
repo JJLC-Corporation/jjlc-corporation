@@ -13,6 +13,16 @@ class WorkoutsController < ApplicationController
         end
     end
 
+    def update
+        workout = Workout.find(params[:id])
+        workout.update(workout_params)
+        if workout.valid?
+            render json: workout
+        else
+            render json: workout.errors, status: 422
+        end
+    end
+
     private
 
     def workout_params
