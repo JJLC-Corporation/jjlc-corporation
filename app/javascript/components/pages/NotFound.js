@@ -1,20 +1,18 @@
-import React from 'react'
-import {Button} from 'reactstrap'
-import { NavLink } from 'react-router-dom'
+import React from "react";
+import { Button } from "reactstrap";
+import { NavLink } from "react-router-dom";
 
 const NotFound = () => {
   return (
     <>
-    <h1>404 NOT FOUND</h1>
-    <div className="notfound-button">
+      <h1>404 NOT FOUND</h1>
+      <div className="notfound-button">
         <NavLink to="/">
-            <Button color="danger">
-                Back to Home
-            </Button>
+          <Button color="danger">Back to Home</Button>
         </NavLink>
-    </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default NotFound
+export default NotFound;
