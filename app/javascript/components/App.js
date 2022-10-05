@@ -1,5 +1,5 @@
 import React from "react"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Header from "./components/Header"
 import Home from "./pages/Home"
 import AboutUs from "./pages/AboutUs"
@@ -21,7 +21,20 @@ import "./app.css"
 
 const App = (props) => {
 
-  const [workout, setWorkout] = useState([])
+  const [workouts, setWorkouts] = useState([])
+
+  useEffect(() => {
+    readWorkout()
+  }, [])
+
+  const readWorkout = () => {
+    fetch("/workouts")
+    .then((response) => response.json())
+    .then((payload) => {
+      setWorkouts(payload)
+    })
+    .catch((error) => console.log(error))    
+  }
 
   return (
     <BrowserRouter>
@@ -29,7 +42,7 @@ const App = (props) => {
     <Routes>
     <Route exact path ="/dashboard" element={<Dashboard />} />
     <Route exact path="/" element={<Home />} />
-    <Route exact path="/workoutindex" element={<WorkoutIndex />} />
+    <Route exact path="/workoutindex" element={<WorkoutIndex workouts = { workouts } {...props} />} />
     <Route exact path="/workoutnew" element={<WorkoutNew />} />
     <Route exact path="/resources" element={<Resources />} />
     <Route exact path="/aboutus"  element={<AboutUs />} />
