@@ -12,7 +12,6 @@ import WorkoutNew from "./pages/WorkoutNew"
 import WorkoutShow from "./pages/WorkoutShow"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Footer from "./components/Footer"
-import DropDown from "./components/DropDown"
 import Navbar from "./components/Navbar"
 import Navigation from "./components/Navigation"
 import Sidebar from "./components/Sidebar"
@@ -34,6 +33,7 @@ const App = (props) => {
     <Route exact path="/workoutnew" element={<WorkoutNew />} />
     <Route exact path="/resources" element={<Resources />} />
     <Route exact path="/aboutus"  element={<AboutUs />} />
+    <Route exact path="/*" element={<NotFound />} />
     </Routes>
     <Footer />
   </BrowserRouter>
