@@ -86,7 +86,7 @@ describe "POST / create" do
   end
 
   describe "PATCH /update" do
-    it "updates an exisiting character" do
+    it "updates an exisiting workout" do
       Workout.create(
         name: 'Power Clean',
         set_reps: '3x5',
@@ -107,6 +107,34 @@ describe "POST / create" do
       workout = Workout.first
 
       expect(workout.name).to eq('Hang Clean')
+      
     end
+  end
+
+  it "updates an exisiting workout" do
+    Workout.create(
+      name: 'Power Clean',
+      set_reps: '3x5',
+      weight: 200,
+      user_id: user.id
+    )
+
+    workout = Workout.first
+
+    workout_params = {
+      workout: {
+        name: 'Hang Clean',
+        set_reps: '4x10',
+        weight: 145,
+        user_id: user.id
+      }
+    }
+
+    patch "/workouts/#{workout.id}", params: workout_params
+
+    workout = Workout.first
+
+    expect(response.status).to eq(200)
+    
   end
 end
