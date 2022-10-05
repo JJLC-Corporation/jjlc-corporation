@@ -47,6 +47,9 @@ const App = (props) => {
     <Route exact path="/resources" element={<Resources />} />
     <Route exact path="/aboutus"  element={<AboutUs />} />
     <Route exact path="/*" element={<NotFound />} />
+    <Route exact path="/workoutedit"  element={<WorkoutEdit workouts = {workouts} {...props} />} />
+    <Route exact path="/workoutshow/:id"  element={<WorkoutShow workouts = {workouts} {...props} />} />
+
     </Routes>
     <Footer />
   </BrowserRouter>

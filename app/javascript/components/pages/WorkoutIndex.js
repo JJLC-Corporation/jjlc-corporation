@@ -8,7 +8,7 @@ const WorkoutIndex = ({workouts, current_user}) => {
   return (
     <>
     <h1>All Workouts</h1>
-    {filteredWorkouts?.map((workout, index) => {
+    {filteredWorkouts?.map((workout) => {
       return(
         <Card
           style={{
@@ -30,7 +30,7 @@ const WorkoutIndex = ({workouts, current_user}) => {
               </ListGroupItem>
               <ListGroupItem>
                 <Button>
-                  <NavLink to={`/workouts/${workout.id}`}>
+                  <NavLink to={`/workoutshow/${workout.id}`}>
                   See Workout
                   </NavLink>
                 </Button>

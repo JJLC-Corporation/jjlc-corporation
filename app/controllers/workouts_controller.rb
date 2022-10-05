@@ -11,12 +11,12 @@ class WorkoutsController < ApplicationController
         else 
             render json: workout.errors, status: 422
         end
-    end
+
+end
 
     private
 
     def workout_params
         params.require(:workout).permit(:name, :set_reps, :weight, :user_id)
     end
-
 end
