@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from 'reactstrap'
+import {Button} from 'reactstrap'
 import { NavLink } from 'react-router-dom'
 
 const NotFound = () => {
@@ -7,7 +7,7 @@ const NotFound = () => {
     <>
     <h1>404 NOT FOUND</h1>
     <div className="notfound-button">
-        <NavLink to="/dashboard">
+        <NavLink to="/">
             <Button color="danger">
                 Back to Home
             </Button>
