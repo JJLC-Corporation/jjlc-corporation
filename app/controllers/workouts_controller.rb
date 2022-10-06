@@ -1,4 +1,5 @@
 class WorkoutsController < ApplicationController
+
     def index
         workouts = Workout.all
         render json: workouts
@@ -12,13 +13,23 @@ class WorkoutsController < ApplicationController
             render json: workout.errors, status: 422
         end
 
-end
+    end
 
     def update
         workout = Workout.find(params[:id])
         workout.update(workout_params)
         if workout.valid?
             render json: workout
+        else
+            render json: workout.errors, status: 422
+        end
+    end
+
+    def destroy
+        workout = Workout.find(params[:id])
+        
+        if workout.destroy
+            render json: workout, status: 204
         else
             render json: workout.errors, status: 422
         end

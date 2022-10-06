@@ -225,4 +225,19 @@ describe "POST / create" do
       expect(json['set_reps']).to include "can't be blank"
     
   end
+  describe "DELETE /destroy" do
+  it "deletes a workout" do
+      Workout.create(
+        name: 'Squat',
+        set_reps: '10x3',
+        weight: 225,
+        user_id: user.id
+      )
+      workout = Workout.first
+      delete "/workouts/#{workout.id}"
+      expect(response.status).to eq(204)
+      workouts = Workout.all
+      expect(workouts).to be_empty
+    end
+  end
 end
