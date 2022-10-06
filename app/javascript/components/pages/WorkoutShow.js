@@ -1,12 +1,12 @@
 import React from "react"
-import { Card, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap'
+import { Card, CardBody, CardTitle, Button, CardText } from 'reactstrap'
 import { NavLink, useParams } from 'react-router-dom'
 
-const WorkoutShow = ({workouts, current_user}) => {
+const WorkoutShow = ({workouts}) => {
 
 const { id } = useParams()
-const workout = workout?.find(workout => workout.user_id === current_user.id)
-console.log(workouts);
+const workout = workouts?.find(workout => workout.id === +id)
+console.log(workout);
 
   return (
     <>
@@ -14,13 +14,13 @@ console.log(workouts);
         
         <CardBody>
           <CardTitle tag="h5">
-            { workout.name }
+            {workout.name}
           </CardTitle>
           <CardText>
-            <p>Sets x Reps {workout.set_reps}</p>
+            Sets x Reps {workout.set_reps}
           </CardText>
           <CardText>
-            <p>Anthem: {workout.weight}</p>
+            Weight: {workout.weight}
           </CardText>
             <NavLink to={`/workoutedit/${workout.id}`} className="nav-link">
             <Button>
