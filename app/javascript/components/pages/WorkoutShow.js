@@ -1,54 +1,37 @@
-import React from 'react'
-import { useParams } from "react-router-dom";
-import {
-  Card,
-  Button,
-  CardTitle,
-  CardBody,
-  CardLink,
-  CardText,
-  ListGroup,
-  ListGroupItem,
-} from "reactstrap";
-import { NavLink } from "react-router-dom";
+import React from "react"
+import { Card, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap'
+import { NavLink, useParams } from 'react-router-dom'
 
-const WorkoutShow = ({ workouts, current_user }) => {
-  const { id } = useParams();
-  let currentWorkout = workouts.find((workout) => workout.user_id === current_user.id);
+const WorkoutShow = ({workouts, current_user}) => {
+
+const { id } = useParams()
+const workout = workout?.find(workout => workout.user_id === current_user.id)
+console.log(workouts);
+
   return (
     <>
-      <h1>View Your Workout</h1>
-      {currentWorkout}
-      <Card
-        style={{
-          width: "18rem",
-        }}
-      >
-        <img alt="Card"  />
+    <div className='WorkoutShow'><Card >
+        
         <CardBody>
           <CardTitle tag="h5">
-            {currentWorkout.name} 
+            { workout.name }
           </CardTitle>
-        </CardBody>
-        <ListGroup flush>
-          <ListGroupItem>Sets x Reps: {currentWorkout.set_reps}</ListGroupItem>
-          <ListGroupItem>Weight: {currentApartment.weight}</ListGroupItem>
-        </ListGroup>
-        <CardBody>
-          <CardLink>
-            <NavLink to="/workoutedit" className="nav-link">
-              <Button>Edit Workout</Button>
+          <CardText>
+            <p>Sets x Reps {workout.set_reps}</p>
+          </CardText>
+          <CardText>
+            <p>Anthem: {workout.weight}</p>
+          </CardText>
+            <NavLink to={`/workoutedit/${workout.id}`} className="nav-link">
+            <Button>
+            Edit Profile
+            </Button>
             </NavLink>
-          </CardLink>
-          <CardLink>
-            <NavLink to="/" className="nav-link">
-              <Button>Delete Workout</Button>
-            </NavLink>
-          </CardLink>
         </CardBody>
       </Card>
+      </div>
     </>
-  );
-};
+    )
+}
 
-export default WorkoutShow;
+export default WorkoutShow
