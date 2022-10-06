@@ -6,6 +6,7 @@
 <ol>
   <li>Clone the repository</li>
   <li>cd into the application</li>
+  <ul><li>Run the following commands</li></ul>
   <li>$ yarn</li>
   <li>$ bundle</li>
   <li>$ rails db:setup</li>
