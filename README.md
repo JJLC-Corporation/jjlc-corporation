@@ -9,7 +9,7 @@
 <li>cd in to the application</li>
 </ul>
 
-### Run the following commands
+#### Run the following commands
 <ol>
 <li>$ yarn</li>
 <li>$ bundle</li>
