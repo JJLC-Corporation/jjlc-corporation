@@ -84,4 +84,145 @@ describe "POST / create" do
       expect(response.status).to eq 422
     end
   end
+
+  describe "PATCH /update" do
+    it "updates an exisiting workout" do
+      Workout.create(
+        name: 'Power Clean',
+        set_reps: '3x5',
+        weight: 200,
+        user_id: user.id
+      )
+
+      workout = Workout.first
+
+      workout_params = {
+        workout: {
+          name: 'Hang Clean'
+        }
+      }
+
+      patch "/workouts/#{workout.id}", params: workout_params
+
+      workout = Workout.first
+
+      expect(workout.name).to eq('Hang Clean')
+      
+    end
+  end
+
+  it "updates an exisiting workout" do
+    Workout.create(
+      name: 'Power Clean',
+      set_reps: '3x5',
+      weight: 200,
+      user_id: user.id
+    )
+
+    workout = Workout.first
+
+    workout_params = {
+      workout: {
+        name: 'Hang Clean',
+        set_reps: '4x10',
+        weight: 145,
+        user_id: user.id
+      }
+    }
+
+    patch "/workouts/#{workout.id}", params: workout_params
+
+    workout = Workout.first
+
+    expect(response.status).to eq(200)
+    
+  end
+
+  it "does not update an exisiting workout if weight is blank" do
+    Workout.create(
+      name: 'Power Clean',
+      set_reps: '3x5',
+      weight: 200,
+      user_id: user.id
+    )
+
+    workout = Workout.first
+
+    workout_params = {
+      workout: {
+        name: 'Hang Clean',
+        set_reps: '4x10',
+        weight: '',
+        user_id: user.id
+      }
+    }
+
+    patch "/workouts/#{workout.id}", params: workout_params
+
+    workout = Workout.first
+
+    expect(response.status).to eq 422
+      json = JSON.parse(response.body)
+      expect(json['weight']).to include "can't be blank"
+    
+  end
+
+
+  it "does not update an exisiting workout if name is blank" do
+    Workout.create(
+      name: 'Power Clean',
+      set_reps: '3x5',
+      weight: 200,
+      user_id: user.id
+    )
+
+    workout = Workout.first
+
+    workout_params = {
+      workout: {
+        name: '',
+        set_reps: '4x10',
+        weight: 145,
+        user_id: user.id
+      }
+    }
+
+    patch "/workouts/#{workout.id}", params: workout_params
+
+    workout = Workout.first
+
+    expect(response.status).to eq 422
+      json = JSON.parse(response.body)
+      expect(json['name']).to include "can't be blank"
+    
+  end
+
+  it "does not update an exisiting workout if set_reps is blank" do
+    Workout.create(
+      name: 'Power Clean',
+      set_reps: '3x5',
+      weight: 200,
+      user_id: user.id
+    )
+
+    workout = Workout.first
+
+    workout_params = {
+      workout: {
+        name: 'Hang Clean',
+        set_reps: '',
+        weight: 145,
+        user_id: user.id
+      }
+    }
+
+    patch "/workouts/#{workout.id}", params: workout_params
+
+    workout = Workout.first
+
+    expect(response.status).to eq 422
+      json = JSON.parse(response.body)
+      expect(json['set_reps']).to include "can't be blank"
+    
+  end
 end
