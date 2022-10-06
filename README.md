@@ -6,12 +6,13 @@
 <ol>
   <li>Clone the repository</li>
   <li>cd into the application</li>
-  <ul><li>Run the following commands</li></ul>
+  <ul>Run the following commands</ul>
   <li>$ yarn</li>
   <li>$ bundle</li>
   <li>$ rails db:setup</li>
   <li>$ yarn add react-router-dom</li>
 </ol>
+
 
 ## Dependencies
 
