@@ -11,7 +11,8 @@ class WorkoutsController < ApplicationController
         else 
             render json: workout.errors, status: 422
         end
-    end
+
+end
 
     def update
         workout = Workout.find(params[:id])
@@ -28,5 +29,4 @@ class WorkoutsController < ApplicationController
     def workout_params
         params.require(:workout).permit(:name, :set_reps, :weight, :user_id)
     end
-
 end
