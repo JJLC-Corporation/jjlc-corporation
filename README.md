@@ -43,10 +43,16 @@
 
 - **Joyce Magistrado - Project Manager**
 - [LinkedIn](https://www.linkedin.com/in/joyce-magistrado/) [GitHub](https://github.com/jmagistrado)
+
+
 - **Luis Laurel - Product Manager**
 - [LinkedIn](https://www.linkedin.com/in/luislaurel/) [GitHub](https://github.com/luislaurel)
+
 - **Cody Mundy - Tech Lead**
+
 - [LinkedIn](https://www.linkedin.com/in/cody-l-mundy/) [GitHub](https://github.com/HeavyArms0511)
+
 - **Jason Brown - Design Lead**
+
 - [LinkedIn]() [GitHub](https://github.com/jayaries329)
  
