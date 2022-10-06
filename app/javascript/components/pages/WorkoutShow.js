@@ -17,7 +17,7 @@ const WorkoutShow = ({ workouts }) => {
             <NavLink to={`/workoutedit/${workout.id}`} className="nav-link">
               <Button>Edit Workout</Button>
             </NavLink>
-            <NavLink>
+            <NavLink to={`/workouts/${workout.id}`}>
               <Button>Delete Workout</Button>
             </NavLink>
           </CardBody>
