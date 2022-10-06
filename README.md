@@ -1,19 +1,20 @@
-
 # Welcome to .Lift()!
 
 ## Running this locally
 
+<ul>
+<li>Clone the repository</li>
+<li>cd in to the application</li>
+</ul>
+
+### Run the following commands
 <ol>
-  <li>Clone the repository</li>
-  <li>cd into the application</li>
-  <ul>Run the following commands</ul>
-  <li>$ yarn</li>
-  <li>$ bundle</li>
-  <li>$ rails db:setup</li>
-  <li>$ yarn add react-router-dom</li>
+<li>$ yarn</li>
+<li>$ bundle</li>
+<li>$ rails db:setup</li>
+<li>$ yarn add react-router-dom</li>
 </ol>
-
-
+  
 ## Dependencies
 
    - "@babel/preset-react": "^7.18.6",
@@ -45,5 +46,3 @@
 **Cody Mundy - Tech Lead**
 
 **Jason Brown - Design Lead**
-
-
