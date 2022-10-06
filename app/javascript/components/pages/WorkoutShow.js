@@ -2,9 +2,14 @@ import React from "react";
 import { Card, CardBody, CardTitle, Button, CardText } from "reactstrap";
 import { NavLink, useParams } from "react-router-dom";
 
-const WorkoutShow = ({ workouts }) => {
+const WorkoutShow = ({ workouts, deleteWorkout }) => {
   const { id } = useParams();
   const workout = workouts?.find((workout) => workout.id === +id);
+
+  const handleDelete = () => {
+    deleteWorkout(id)
+    // console.log(workout)
+  }
 
   return (
     <>
@@ -17,8 +22,8 @@ const WorkoutShow = ({ workouts }) => {
             <NavLink to={`/workoutedit/${workout.id}`} className="nav-link">
               <Button>Edit Workout</Button>
             </NavLink>
-            <NavLink to={`/workouts/${workout.id}`}>
-              <Button>Delete Workout</Button>
+            <NavLink to={'/workoutindex'}>
+              <Button onClick={handleDelete}>Delete Workout</Button>
             </NavLink>
           </CardBody>
         </Card>

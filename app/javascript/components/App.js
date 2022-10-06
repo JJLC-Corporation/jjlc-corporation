@@ -36,6 +36,18 @@ const App = (props) => {
     .catch((error) => console.log(error))    
   }
 
+  const deleteWorkout = (id) => {
+    fetch (`/workouts/${id}`, {
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "DELETE"
+    })
+    .then((response) => response.json())
+    .then((payload) => readWorkout())
+    .catch((errors) => console.log("delete errors:", errors))
+  }
+
   return (
     <BrowserRouter>
     <Header {...props} />
@@ -48,7 +60,7 @@ const App = (props) => {
     <Route exact path="/aboutus"  element={<AboutUs />} />
     <Route exact path="/*" element={<NotFound />} />
     <Route exact path="/workoutedit"  element={<WorkoutEdit workouts = {workouts} {...props} />} />
-    <Route exact path="/workoutshow/:id"  element={<WorkoutShow workouts = {workouts} {...props} />} />
+    <Route exact path="/workoutshow/:id"  element={<WorkoutShow workouts = {workouts} deleteWorkout = { deleteWorkout } {...props} />} />
 
     </Routes>
     <Footer />
