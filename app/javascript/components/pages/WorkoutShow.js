@@ -2,13 +2,12 @@ import React from "react";
 import { Card, CardBody, CardTitle, Button, CardText } from "reactstrap";
 import { NavLink, useParams } from "react-router-dom";
 
-const WorkoutShow = ({ workouts }, { logged_in }) => {
+const WorkoutShow = ({ workouts }) => {
   const { id } = useParams();
   const workout = workouts?.find((workout) => workout.id === +id);
 
   return (
     <>
-    {logged_in && (
       <div className="WorkoutShow">
         <Card>
           <CardBody>
@@ -24,7 +23,6 @@ const WorkoutShow = ({ workouts }, { logged_in }) => {
           </CardBody>
         </Card>
       </div>
-    )}
     </>
   );
 };
