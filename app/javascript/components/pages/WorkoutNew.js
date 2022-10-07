@@ -21,11 +21,7 @@ const WorkoutNew = ({ createWorkout }) => {
   return (
     <>
       <h1>Add A Workout</h1>
-<<<<<<< HEAD
-      {!logged_in && (<Form>
-=======
       <Form>
->>>>>>> adcec17ad519122015b2eda22497e614bbf14b1e
         <Row>
           <Col md={6}>
             <FormGroup>
