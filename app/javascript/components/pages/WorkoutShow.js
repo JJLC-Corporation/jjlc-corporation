@@ -8,7 +8,7 @@ const WorkoutShow = ({ workouts, deleteWorkout }) => {
 
   const handleDelete = () => {
     deleteWorkout(id)
-    // console.log(workout)
+    console.log(workout)
   }
 
   return (
@@ -23,7 +23,7 @@ const WorkoutShow = ({ workouts, deleteWorkout }) => {
               <Button>Edit Workout</Button>
             </NavLink>
             <NavLink to={'/workoutindex'}>
-              <Button onClick={handleDelete}>Delete Workout</Button>
+              <Button onClick={handleDelete} name="submit">Delete Workout</Button>
             </NavLink>
           </CardBody>
         </Card>
