@@ -1,32 +1,21 @@
-import React, {useState} from "react";
 import { screen, render } from "@testing-library/react";
 import WorkoutEdit from "./WorkoutEdit";
-import { BrowserRouter } from "react-router-dom";
-import { mockWorkouts } from "../mockWorkout"
+import { MemoryRouter, Route, Routes } from "react-router-dom";
+import mockWorkouts from "../mockWorkout"
+import React from 'react'
 
-
-const [workouts, setWorkouts] = useState([{mockWorkouts}])
-
-const updateWorkout = (workout, id) => {
-  fetch(`/workouts/${id}`, {
-    body: JSON.stringify(workout),
-    headers: {
-      "Content-Type": "application/json",
-    },
-    method: "PATCH",
-  })
-    .then((response) => response.json())
-    .then((payload) => console.log(payload))
-    .catch((error) => console.log("update error:", error))
-    .finally(() => console.log(payload));
-};
 
 describe("<WorkoutEdit/>", () => {
   it("WorkoutEdit renders without error", () => {
     render(
-      <BrowserRouter>
-        <WorkoutEdit logged_in={true} updateWorkout={updateWorkout} workouts={workouts}/>
-      </BrowserRouter>
+      <MemoryRouter initialEntries={["/workoutedit/1"]}>
+        <Routes>
+          <Route
+            path="/workoutedit/:id"
+            element={<WorkoutEdit logged_in={true} workouts={currentWorkout} />}
+          />
+        </Routes>
+      </MemoryRouter>
     );
 
     const heading = screen.getByRole("heading", { name: /Update Workout/i });
@@ -35,9 +24,14 @@ describe("<WorkoutEdit/>", () => {
   });
   it("form has input fields", () => {
     render(
-      <BrowserRouter>
-        <WorkoutEdit logged_in={true} updateWorkout={updateWorkout}  workouts={workouts}/>
-      </BrowserRouter>
+      <MemoryRouter initialEntries={["/workoutedit/1"]}>
+        <Routes>
+          <Route
+            path="/workoutedit/:id"
+            element={<WorkoutEdit  logged_in={true} workouts={currentWorkout} />}
+          />
+        </Routes>
+      </MemoryRouter>
     );
 
     const textbox = screen.getAllByRole("textbox");
