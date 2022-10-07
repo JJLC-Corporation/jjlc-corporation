@@ -1,6 +1,4 @@
 import React from 'react'
-import '../app.css'
-
 const Resources = () => {
   return (
     <div className= "r-background">

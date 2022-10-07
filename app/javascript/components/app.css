@@ -20,7 +20,7 @@
 }
 
 .r-resources{
-    padding-left: 30px;
+    padding: 50px;
     
 }
 
@@ -31,4 +31,8 @@ a {
 
 .r-stretches{
     padding-top: 40px;
+}
+
+.accordion{
+    padding: 40px;
 }
