@@ -5,3 +5,30 @@
 .logged-out-navbar{
     background-color: red;
 }
+
+/* unprotected resources */
+
+.r-background{
+    background-color: #E6F2F2;
+}
+
+.r-header{
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
+    padding: 50px;
+}
+
+.r-resources{
+    padding-left: 30px;
+    
+}
+
+a {
+    color:black;
+    
+}
+
+.r-stretches{
+    padding-top: 40px;
+}
