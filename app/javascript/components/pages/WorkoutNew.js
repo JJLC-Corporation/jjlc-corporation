@@ -23,7 +23,10 @@ const WorkoutNew = ({
 
   return (
     <>
+    {logged_in && (
       <h1>Add A Workout</h1>
+      )}
+    {logged_in && (
       <Form>
         <Row>
           <Col md={6}>
@@ -65,6 +68,7 @@ const WorkoutNew = ({
           Submit your workout
         </Button>
       </Form>
+      )}
     </>
   );
 };
