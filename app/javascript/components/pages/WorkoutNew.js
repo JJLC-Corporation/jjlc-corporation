@@ -64,6 +64,7 @@ const WorkoutNew = ({ createWorkout, logged_in }) => {
           </Button>
         </Form>
       )}
+      {!logged_in && <h1>Please sign in</h1>}
     </>
   );
 };
