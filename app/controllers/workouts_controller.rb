@@ -6,7 +6,8 @@ class WorkoutsController < ApplicationController
     end
 
     def create
-        workout = Workout.create(workout_params)
+        user = current_user
+        workout = user.workouts.create(workout_params)
         if workout.valid?
             render json: workout
         else 
