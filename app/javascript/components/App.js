@@ -48,9 +48,18 @@ const App = (props) => {
     .catch((error) => console.log("delete error:", error))
     .finally(() => readWorkout())
   }
-  const createWorkout = (workout) => {
-  console.log(workout)
-}
+   const createWorkout = (workout) => {
+    fetch('http://localhost:3000/workouts', {
+      body: JSON.stringify(workout),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "POST"
+    })
+    .then(response => response.json())
+    .then(payload => readWorkout())
+    .catch(error => console.log("couldn't create workout:", error))
+  }
   return (
     <BrowserRouter>
     <Header {...props} />

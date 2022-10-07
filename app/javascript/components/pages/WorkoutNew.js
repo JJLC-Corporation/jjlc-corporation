@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Form, Row, Col, FormGroup, Label, Input, Button } from "reactstrap";
-import {logged_in} from "../components/Navigation";
 
 const WorkoutNew = ({ createWorkout }) => {
   const navigate = useNavigate();
@@ -20,10 +19,9 @@ const WorkoutNew = ({ createWorkout }) => {
   };
 
   return (
-    // !logged in shows the form at all times but logged_in won't show it at all?
     <>
       <h1>Add A Workout</h1>
-      {logged_in && (<Form>
+      <Form>
         <Row>
           <Col md={6}>
             <FormGroup>
@@ -64,7 +62,6 @@ const WorkoutNew = ({ createWorkout }) => {
           Submit your workout
         </Button>
       </Form>
-      )}
     </>
   );
 };
