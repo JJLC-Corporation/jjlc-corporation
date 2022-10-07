@@ -37,8 +37,7 @@ const App = (props) => {
   }
 
   const deleteWorkout = (id) => {
-    console.log(id)
-    fetch (`/workouts/${id}`, {
+    fetch(`/workouts/${id}`, {
       headers: {
         "Content-Type": "application/json"
       },
@@ -47,6 +46,7 @@ const App = (props) => {
     .then((response) => response.json())
     .then((payload) => readWorkout())
     .catch((error) => console.log("delete error:", error))
+    .finally(() => readWorkout())
   }
 
   return (
