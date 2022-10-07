@@ -23,7 +23,7 @@ const WorkoutNew = ({ createWorkout }) => {
     // !logged in shows the form at all times but logged_in won't show it at all?
     <>
       <h1>Add A Workout</h1>
-      {logged_in && (<Form>
+      {!logged_in && (<Form>
         <Row>
           <Col md={6}>
             <FormGroup>
