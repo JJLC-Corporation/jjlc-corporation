@@ -48,9 +48,15 @@ const App = (props) => {
     .catch((error) => console.log("delete error:", error))
     .finally(() => readWorkout())
   }
+<<<<<<< HEAD
   const createWorkout = (workouts) => {
     fetch("/workouts", {
       body: JSON.stringify(workouts),
+=======
+   const createWorkout = (workout) => {
+    fetch('http://localhost:3000/workouts', {
+      body: JSON.stringify(workout),
+>>>>>>> adcec17ad519122015b2eda22497e614bbf14b1e
       headers: {
         "Content-Type": "application/json"
       },
@@ -58,9 +64,14 @@ const App = (props) => {
     })
     .then(response => response.json())
     .then(payload => readWorkout())
+<<<<<<< HEAD
     .catch(error => console.log("Workout create error:", error))
   }
   
+=======
+    .catch(error => console.log("couldn't create workout:", error))
+  }
+>>>>>>> adcec17ad519122015b2eda22497e614bbf14b1e
   return (
     <BrowserRouter>
     <Header {...props} />
