@@ -48,9 +48,9 @@ const App = (props) => {
     .catch((error) => console.log("delete error:", error))
     .finally(() => readWorkout())
   }
-  const createWorkout = (workout) => {
+  const createWorkout = (workouts) => {
     fetch("/workouts", {
-      body: JSON.stringify(workout),
+      body: JSON.stringify(workouts),
       headers: {
         "Content-Type": "application/json"
       },
@@ -60,6 +60,7 @@ const App = (props) => {
     .then(payload => readWorkout())
     .catch(error => console.log("Workout create error:", error))
   }
+  
   return (
     <BrowserRouter>
     <Header {...props} />
@@ -67,7 +68,7 @@ const App = (props) => {
     <Route exact path ="/dashboard" element={<Dashboard />} />
     <Route exact path="/" element={<Home />} />
     <Route exact path="/workoutindex" element={<WorkoutIndex workouts = { workouts } {...props} />} />
-    <Route exact path="/workoutnew" element={<WorkoutNew createWorkout={createWorkout}/>} />
+    <Route exact path="/workoutnew" element={<WorkoutNew createWorkout={createWorkout} {...props} />} />
     <Route exact path="/resources" element={<Resources />} />
     <Route exact path="/aboutus"  element={<AboutUs />} />
     <Route exact path="/*" element={<NotFound />} />
