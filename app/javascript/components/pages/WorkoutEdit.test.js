@@ -1,7 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import { screen, render } from "@testing-library/react";
 import WorkoutEdit from "./WorkoutEdit";
 import { BrowserRouter } from "react-router-dom";
+import { mockWorkouts } from "../mockWorkout"
+
+
+const [workouts, setWorkouts] = useState([{mockWorkouts}])
 
 const updateWorkout = (workout, id) => {
   fetch(`/workouts/${id}`, {
@@ -14,25 +18,25 @@ const updateWorkout = (workout, id) => {
     .then((response) => response.json())
     .then((payload) => console.log(payload))
     .catch((error) => console.log("update error:", error))
-    .finally(() => readWorkout());
+    .finally(() => console.log(payload));
 };
 
 describe("<WorkoutEdit/>", () => {
   it("WorkoutEdit renders without error", () => {
     render(
       <BrowserRouter>
-        <WorkoutNew logged_in={true} updateWorkout={updateWorkout} />
+        <WorkoutEdit logged_in={true} updateWorkout={updateWorkout} workouts={workouts}/>
       </BrowserRouter>
     );
 
-    const heading = screen.getByRole("heading", { name: /Add a Workout/i });
+    const heading = screen.getByRole("heading", { name: /Update Workout/i });
 
     expect(heading).toBeInTheDocument();
   });
   it("form has input fields", () => {
     render(
       <BrowserRouter>
-        <WorkoutNew logged_in={true} createWorkout={createWorkout} />
+        <WorkoutEdit logged_in={true} updateWorkout={updateWorkout}  workouts={workouts}/>
       </BrowserRouter>
     );
 

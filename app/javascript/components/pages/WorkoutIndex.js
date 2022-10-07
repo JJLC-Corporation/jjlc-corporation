@@ -2,7 +2,7 @@ import React from 'react'
 import { Card, CardHeader, ListGroup, ListGroupItem, Button } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
 
-const WorkoutIndex = ({workouts, current_user}) => {
+const WorkoutIndex = ({workouts, current_user }) => {
   const filteredWorkouts = workouts?.filter(workout => workout.user_id === current_user.id)
   console.log(workouts);
   return (
