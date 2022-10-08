@@ -1,9 +1,15 @@
 import { screen, render } from "@testing-library/react";
-import WorkoutEdit from "./WorkoutEdit";
+import WorkoutEdit, {currentWorkout } from "./WorkoutEdit";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
-import mockWorkouts from "../mockWorkout"
-import React from 'react'
+import React, { useState } from "react";
 
+
+const workouts = [{
+  name: 'bench',
+  set_reps: '40x40',
+  weight: 300,
+  user_id: 1
+}]
 
 describe("<WorkoutEdit/>", () => {
   it("WorkoutEdit renders without error", () => {
@@ -12,13 +18,13 @@ describe("<WorkoutEdit/>", () => {
         <Routes>
           <Route
             path="/workoutedit/:id"
-            element={<WorkoutEdit logged_in={true} workouts={currentWorkout} />}
+            element={<WorkoutEdit logged_in={true} workouts={workouts}/>}
           />
         </Routes>
       </MemoryRouter>
     );
 
-    const heading = screen.getByRole("heading", { name: /Update Workout/i });
+    const heading = screen.getByText(/Update workout/i)
 
     expect(heading).toBeInTheDocument();
   });
@@ -28,7 +34,7 @@ describe("<WorkoutEdit/>", () => {
         <Routes>
           <Route
             path="/workoutedit/:id"
-            element={<WorkoutEdit  logged_in={true} workouts={currentWorkout} />}
+            element={<WorkoutEdit  logged_in={true} workouts={workouts} />}
           />
         </Routes>
       </MemoryRouter>

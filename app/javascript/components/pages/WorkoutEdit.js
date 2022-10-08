@@ -8,12 +8,7 @@ const WorkoutEdit = ({ workouts, updateWorkout, logged_in}) => {
 
   const currentWorkout = workouts?.find((workout) => workout.id === +id);
 
-  const [editWorkout, setEditWorkout] = useState({
-    name: currentWorkout.name,
-    set_reps: currentWorkout.set_reps,
-    weight: currentWorkout.weight,
-   
-  });
+  const [editWorkout, setEditWorkout] = useState(workouts);
 
   const handleWorkouts = (e) => {
     setEditWorkout({ ...editWorkout, [e.target.name]: e.target.value });
@@ -37,7 +32,7 @@ const WorkoutEdit = ({ workouts, updateWorkout, logged_in}) => {
                 placeholder="Change workout name"
                 type="text"
                 onChange={handleWorkouts}
-                value={editWorkout.name}
+                value={workouts.name}
               />
               <Label for="set_reps">Sets x Reps</Label>
               <Input
@@ -45,7 +40,7 @@ const WorkoutEdit = ({ workouts, updateWorkout, logged_in}) => {
                 placeholder="Change your Sets/Reps "
                 type="text"
                 onChange={handleWorkouts}
-                value={editWorkout.set_reps}
+                value={workouts.set_reps}
               />
               <Label for="weight">Change weight</Label>
               <Input
@@ -53,7 +48,7 @@ const WorkoutEdit = ({ workouts, updateWorkout, logged_in}) => {
                 placeholder="Change weight"
                 type="number"
                 onChange={handleWorkouts}
-                value={editWorkout.weight}
+                value={workouts.weight}
               />
             </FormGroup>
             <Button onClick={handleSubmit} name="submit">
