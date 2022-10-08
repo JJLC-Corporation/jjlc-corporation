@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className='footer'>
       <p className='footer-developers'>
-      © JJLC Corporation
+      ©  {new Date().getFullYear()} JJLC Corporation
       </p>
     </div>
   )
