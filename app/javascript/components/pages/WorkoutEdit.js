@@ -39,9 +39,9 @@ const WorkoutEdit = ({ workouts, updateWorkout, logged_in}) => {
                 onChange={handleWorkouts}
                 value={editWorkout.name}
               />
-              <Label for="sets x reps">Sets x Reps</Label>
+              <Label for="set_reps">Sets x Reps</Label>
               <Input
-                name="setsxreps"
+                name="set_reps"
                 placeholder="Change your Sets/Reps "
                 type="text"
                 onChange={handleWorkouts}
