@@ -16,6 +16,7 @@ import Navbar from "./components/Navbar"
 import Navigation from "./components/Navigation"
 import Sidebar from "./components/Sidebar"
 import "./app.css"
+import DailyQuote from "./pages/DailyQuote"
 
 
 
@@ -89,7 +90,7 @@ const App = (props) => {
     <Route exact path="/*" element={<NotFound />} />
     <Route exact path="/workoutedit/:id"  element={<WorkoutEdit workouts = {workouts} {...props} updateWorkout={updateWorkout}/>} />
     <Route exact path="/workoutshow/:id"  element={<WorkoutShow workouts = {workouts} deleteWorkout = { deleteWorkout } {...props} />} />
-
+    <Route exact path="/dailyquote" element={<DailyQuote/>} />
     </Routes>
     <Footer />
   </BrowserRouter>
