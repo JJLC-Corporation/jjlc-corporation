@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, CardBody, CardTitle, Button, CardText } from "reactstrap";
 import { NavLink, useParams } from "react-router-dom";
+import DeleteConfirmation from "../components/DeleteConfirmation";
 
 const WorkoutShow = ({ workouts, deleteWorkout }) => {
   const { id } = useParams();
@@ -22,9 +23,7 @@ const WorkoutShow = ({ workouts, deleteWorkout }) => {
             <NavLink to={`/workoutedit/${workout.id}`} className="nav-link">
               <Button>Edit Workout</Button>
             </NavLink>
-            <NavLink to={'/workoutindex'}>
-              <Button onClick={handleDelete} name="submit">Delete Workout</Button>
-            </NavLink>
+            <DeleteConfirmation handleDelete={handleDelete}/>
           </CardBody>
         </Card>
       </div>
