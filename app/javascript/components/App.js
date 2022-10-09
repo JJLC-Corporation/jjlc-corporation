@@ -27,6 +27,18 @@ const App = (props) => {
     readWorkout()
   }, [])
 
+  const createWorkout = (workouts) => {
+    fetch("/workouts", {
+      body: JSON.stringify(workouts),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    })
+      .then((response) => response.json())
+      .then((payload) => readWorkout())
+      .catch((error) => console.log("Workout create error:", error));
+  };
   const readWorkout = () => {
     fetch("/workouts")
     .then((response) => response.json())
@@ -35,6 +47,20 @@ const App = (props) => {
     })
     .catch((error) => console.log(error))    
   }
+
+  const updateWorkout = (workout, id) => {
+    fetch(`/workouts/${id}`, {
+      body: JSON.stringify(workout),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "PATCH",
+    })
+      .then((response) => response.json())
+      .then((payload) => readWorkout())
+      .catch((error) => console.log("update error:", error))
+      .finally(() => readWorkout());
+  };
 
   const deleteWorkout = (id) => {
     fetch(`/workouts/${id}`, {
@@ -48,18 +74,7 @@ const App = (props) => {
     .catch((error) => console.log("delete error:", error))
     .finally(() => readWorkout())
   }
-  const createWorkout = (workouts) => {
-    fetch("/workouts", {
-      body: JSON.stringify(workouts),
-      headers: {
-        "Content-Type": "application/json"
-      },
-      method: "POST"
-    })
-    .then(response => response.json())
-    .then(payload => readWorkout())
-    .catch(error => console.log("Workout create error:", error))
-  }
+  
   
   return (
     <BrowserRouter>
@@ -72,7 +87,7 @@ const App = (props) => {
     <Route exact path="/resources" element={<Resources />} />
     <Route exact path="/aboutus"  element={<AboutUs />} />
     <Route exact path="/*" element={<NotFound />} />
-    <Route exact path="/workoutedit"  element={<WorkoutEdit workouts = {workouts} {...props} />} />
+    <Route exact path="/workoutedit/:id"  element={<WorkoutEdit workouts = {workouts} {...props} updateWorkout={updateWorkout}/>} />
     <Route exact path="/workoutshow/:id"  element={<WorkoutShow workouts = {workouts} deleteWorkout = { deleteWorkout } {...props} />} />
 
     </Routes>

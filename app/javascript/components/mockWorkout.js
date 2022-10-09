@@ -1,4 +1,4 @@
-const workouts = [
+const mockWorkouts = [
     {
         name: 'bench press',
         set_reps: '3x5',
@@ -13,4 +13,4 @@ const workouts = [
     }
 ]
 
-export default workouts
+export default mockWorkouts
