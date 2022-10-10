@@ -3,9 +3,9 @@ import React from 'react'
 const Footer = () => {
   return (
     <div className='footer'>
-      <p className='footer-developers'>
+      <a href='https://github.com/orgs/JJLC-Corporation/repositories' className='footer-developers'>
       ©  {new Date().getFullYear()} JJLC Corporation
-      </p>
+      </a>
     </div>
   )
 }

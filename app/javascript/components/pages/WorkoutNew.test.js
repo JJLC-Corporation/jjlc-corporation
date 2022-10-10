@@ -20,7 +20,7 @@ describe("<WorkoutNew/>", () => {
     it("WorkoutNew renders without error", () => {
         render(
             <BrowserRouter>
-                <WorkoutNew logged_in={true} createWorkout={createWorkout}/>
+                <WorkoutNew logged_in={true} createWorkout={createWorkout} current_user={true} />
             </BrowserRouter>
             )
 
@@ -31,7 +31,7 @@ describe("<WorkoutNew/>", () => {
     it("form has input fields", () => {
         render(
             <BrowserRouter>
-                <WorkoutNew logged_in={true} createWorkout={createWorkout} />
+                <WorkoutNew logged_in={true} createWorkout={createWorkout} current_user={true} />
             </BrowserRouter>        )
 
         const textbox = screen.getAllByRole("textbox")
