@@ -1,3 +1,9 @@
+main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
 .logged-in-navbar{
     background-color: blue;
 }
@@ -36,3 +42,13 @@ a {
 .accordion{
     padding: 40px;
 }
+
+.footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .WorkoutShow{
+    padding: 175px;
+  }
