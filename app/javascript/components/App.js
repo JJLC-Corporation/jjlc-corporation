@@ -21,14 +21,15 @@ import DailyQuote from "./pages/DailyQuote"
 
 
 const App = (props) => {
-
   const [workouts, setWorkouts] = useState([])
-
+  
   useEffect(() => {
     readWorkout()
   }, [])
-
+  
+  console.log(props)
   const createWorkout = (workouts) => {
+    console.log('workout object',workouts)
     fetch("/workouts", {
       body: JSON.stringify(workouts),
       headers: {

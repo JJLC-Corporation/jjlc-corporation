@@ -3,12 +3,13 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Form, Row, Col, FormGroup, Label, Input, Button } from "reactstrap";
 
-const WorkoutNew = ({ createWorkout, logged_in }) => {
+const WorkoutNew = ({ createWorkout, logged_in, current_user }) => {
   const navigate = useNavigate();
   const [newWorkout, setNewWorkout] = useState({
     name: "",
     set_reps: "",
     weight: "",
+    user_id: current_user.id
   });
   const handleWorkouts = (e) => {
     setNewWorkout({ ...newWorkout, [e.target.name]: e.target.value });
@@ -17,7 +18,7 @@ const WorkoutNew = ({ createWorkout, logged_in }) => {
     createWorkout(newWorkout);
     navigate("/workoutindex");
   };
-
+console.log('workoutnew',current_user);
   return (
     <>
       {logged_in && <h1>Add A Workout</h1>}
