@@ -70,19 +70,6 @@ describe "POST / create" do
       json = JSON.parse(response.body)
       expect(json['weight']).to include "can't be blank"
     end
-
-    it "doesnt create a workout without a user" do
-      workout_params = {
-        workout: {
-          name: "Bench press",
-          set_reps: '3x5',
-          weight: 155,
-        }
-      }
-      post '/workouts', params: workout_params
-
-      expect(response.status).to eq 422
-    end
   end
 
   describe "PATCH /update" do
