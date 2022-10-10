@@ -6,7 +6,7 @@ class WorkoutsController < ApplicationController
     end
 
     def create
-        user = current_user
+        user = User.find(workout_params[:user_id])
         workout = user.workouts.create(workout_params)
         if workout.valid?
             render json: workout

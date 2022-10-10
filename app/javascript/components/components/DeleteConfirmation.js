@@ -16,12 +16,12 @@ const DeleteConfirmation = ({handleDelete}) => {
             name="submit"
             onClick={toggle}
          >
-            Delete Profile
+            Delete Workout
          </Button>
          <Modal toggle={toggle} isOpen={showModal}>
          <ModalHeader>Delete Confirmation</ModalHeader>
          <ModalBody>
-            Are you sure you want to delete this profile?
+            Are you sure you want to delete this Workout?
          </ModalBody>
          <ModalFooter>
             <NavLink to={`/workoutindex`} className="nav-link">
