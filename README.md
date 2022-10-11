@@ -51,6 +51,10 @@
    - "webpack": "^4.46.0",
    - "webpack-cli": "^3.3.12"
 
+## Architecture 
+
+
+
 
 
 ## Contributors
