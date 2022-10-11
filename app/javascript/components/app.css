@@ -65,7 +65,7 @@ a {
 }
 
 .welcome-bg{
-    background-color: #ff383e;
+    background-color: #FF1B1C;
     min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -101,13 +101,13 @@ text-align: center;
 }
 
 .home-title{
-    padding-top: 25%
+    padding-top: 20%
 }
 
 .title{
     color: white;
     font-style: italic;
-    font-size: 90px;
+    font-size: 100px;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -118,9 +118,9 @@ text-align: center;
 }
 
 .title-1{
-    color: #ff383e;
+    color: #FF1B1C;
     font-style: italic;
-    font-size: 90px;
+    font-size: 100px;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -133,7 +133,7 @@ text-align: center;
 }
 
 .button{
-    background-color: #ff383e;
+    background-color: #FF1B1C;
     border: none;
     color: white;
     padding: 12px 35px;
@@ -151,7 +151,7 @@ text-align: center;
     padding: 30px;
     display:flex;
     justify-content: center;
-    
+
 }
 .button-left{
     background-color: black;
@@ -173,7 +173,7 @@ text-align: center;
 
 .page-2{
     font-size: 80px;
-    color: white;
+    color: #FFFFFC;
     font-family: 'Anton', sans-serif;
     letter-spacing: 0.1em;
     display: flex;
@@ -190,4 +190,47 @@ text-align: center;
     padding-top: 50px;
     padding-left: 90px;
     padding-right: 90px;
+}
+
+.page-3{
+    background-image: url(https://images.unsplash.com/photo-1542684377-0b875fde9563?ixlibrb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTU5fHxneW18ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60);
+    min-height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contact-info{
+    background-color: #E6F2F2;
+    min-height: 30vh;
+}
+
+.contact-us{
+    font-family: 'Anton', sans-serif;
+    color: #FF1B1C;
+    font-size: 80px;
+    display: flex;
+    padding-top: 8%;
+    padding-left: 5%;
+    justify-content:center; 
+}
+
+
+
+.connect{
+    color: #FF1B1C;
+}
+
+.email{
+    color: white;
+    display:flex;
+    justify-content:center;
+    
+}
+
+.email-style{
+    font-size: 50px;
+    font-family: 'Anton', sans-serif;
+    display:flex;
+    justify-content:center;
+    color:#6E6E6E;
 }
