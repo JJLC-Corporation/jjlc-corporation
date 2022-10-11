@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Roboto&display=swap');
+
 main{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-  }
+}
 
 .logged-in-navbar{
     background-color: blue;
@@ -48,7 +50,189 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .WorkoutShow{
+}
+.WorkoutShow{
     padding: 175px;
-  }
+}
+
+/* home  */
+
+.home-bg{
+    background-image: url(https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fGd5bXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60);
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.welcome-bg{
+    background-color: #FF1B1C;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.welcome-box{
+    background-color: white;
+    display: flex;
+    margin: 0 auto;
+    height: 40vh;
+    width: 90vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.welcome-container{
+    padding-top: 15%;
+    margin: 0 auto;
+}
+
+.welcome-title{
+font-size: 60px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+.front-page{
+    background-color: black;
+
+}
+
+.home-title{
+    padding-top: 20%
+}
+
+.title{
+    color: white;
+    font-style: italic;
+    font-size: 100px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+
+}
+
+.title-1{
+    color: #FF1B1C;
+    font-style: italic;
+    font-size: 100px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-weight: bolder;
+}
+
+.space-button{
+    padding-top: 20px;
+}
+
+.button{
+    background-color: #FF1B1C;
+    border: none;
+    color: white;
+    padding: 12px 35px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    margin: auto;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.button2-div{
+    padding: 30px;
+    display:flex;
+    justify-content: center;
+
+}
+.button-left{
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 12px 35px;
+    text-decoration: none;
+    margin-right: 50px;
+}
+
+.button-right{
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 12px 35px;
+    text-decoration: none;
+    margin-left:50px;
+}
+
+.page-2{
+    font-size: 80px;
+    color: #FFFFFC;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+}
+
+.para-2{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+.page-3{
+    background-image: url(https://images.unsplash.com/photo-1542684377-0b875fde9563?ixlibrb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTU5fHxneW18ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60);
+    min-height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contact-info{
+    background-color: #E6F2F2;
+    min-height: 30vh;
+}
+
+.contact-us{
+    font-family: 'Anton', sans-serif;
+    color: #FF1B1C;
+    font-size: 90px;
+    display: flex;
+    padding-top: 8%;
+    padding-left: 5%;
+    justify-content:center; 
+    letter-spacing: 0.1em;
+}
+
+
+
+.connect{
+    color: #FF1B1C;
+}
+
+.email{
+    color: white;
+    display:flex;
+    justify-content:center;
+    
+}
+
+.email-style{
+    font-size: 50px;
+    font-family: 'Anton', sans-serif;
+    display:flex;
+    justify-content:center;
+    color:#6E6E6E;
+    text-shadow: 2px 2px white;
+}
