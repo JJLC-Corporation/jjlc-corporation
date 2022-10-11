@@ -17,7 +17,20 @@
 <li>$ yarn add react-router-dom</li>
 <li>$ rails s to start the server!
 </ol>
-  
+
+## Languages
+<ul>
+<li>JavaScript</li>
+<li>Ruby</li>
+<li>CSS</li>
+<li>React JS</li>
+</ul>
+ 
+## Built with
+<ul>
+<li>React in Rails</li>
+</ul>
+
 ## Dependencies
 
    - "@babel/preset-react": "^7.18.6",
