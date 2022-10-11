@@ -15,6 +15,7 @@
 <li>$ bundle</li>
 <li>$ rails db:setup</li>
 <li>$ yarn add react-router-dom</li>
+<li>$rails s to start the server!
 </ol>
   
 ## Dependencies
