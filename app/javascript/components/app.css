@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Roboto&display=swap');
+
 main{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-  }
+}
 
 .logged-in-navbar{
     background-color: blue;
@@ -48,7 +50,144 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .WorkoutShow{
+}
+.WorkoutShow{
     padding: 175px;
-  }
+}
+
+/* home  */
+
+.home-bg{
+    background-image: url(https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fGd5bXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60);
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.welcome-bg{
+    background-color: #ff383e;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.welcome-box{
+    background-color: white;
+    display: flex;
+    margin: 0 auto;
+    height: 40vh;
+    width: 90vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.welcome-container{
+    padding-top: 15%;
+    margin: 0 auto;
+}
+
+.welcome-title{
+font-size: 60px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+.front-page{
+    background-color: black;
+
+}
+
+.home-title{
+    padding-top: 25%
+}
+
+.title{
+    color: white;
+    font-style: italic;
+    font-size: 90px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+
+}
+
+.title-1{
+    color: #ff383e;
+    font-style: italic;
+    font-size: 90px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-weight: bolder;
+}
+
+.space-button{
+    padding-top: 20px;
+}
+
+.button{
+    background-color: #ff383e;
+    border: none;
+    color: white;
+    padding: 12px 35px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    margin: auto;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.button2-div{
+    padding: 30px;
+    display:flex;
+    justify-content: center;
+    
+}
+.button-left{
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 12px 35px;
+    text-decoration: none;
+    margin-right: 50px;
+}
+
+.button-right{
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 12px 35px;
+    text-decoration: none;
+    margin-left:50px;
+}
+
+.page-2{
+    font-size: 80px;
+    color: white;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+}
+
+.para-2{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-left: 90px;
+    padding-right: 90px;
+}
