@@ -1,7 +1,8 @@
 import React, { Component, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'; 
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
 import {
   Carousel,
   CarouselItem,
@@ -109,8 +110,12 @@ function AboutUsCarousel(args) {
               <h3 className="job"><i>{item.altText}</i></h3>
               <p className='description'>{item.description}</p>
               <div className='about-links'>
-                <a href={item.linkedin}className='linkedin' target='blank'><FontAwesomeIcon icon={faLinkedinIn} /></a>
-                <a href={item.GitHub}className='github' target='blank'><FontAwesomeIcon icon={faGithub} /></a>
+                <a href={item.linkedin}className='linkedin' target='blank'>
+                  <FontAwesomeIcon icon={faLinkedin} />
+                  </a>
+                <a href={item.GitHub}className='github' target='blank'>
+                  <FontAwesomeIcon icon={faGithub} />
+                  </a>
               </div>
             </div>
           </div>

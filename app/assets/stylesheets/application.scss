@@ -325,4 +325,60 @@ a:hover {
     align-items: center;
     padding: 10px;
     margin: auto;
+
 }
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/manwithbar.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.white-box {
+    background: white;
+    padding: 15px;
+    border-radius: 3px;
+    width: 300px;
+    height: 300px;
+}
+
+.signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/girlwithrope.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+// sign up whitebox
+.white-box2 {
+    background: white;
+    padding: 15px;
+    border-radius: 3px;
+    width: 300px;
+    height: 325px;
+}
+
+.devise-footer {
+    display: flex;
+    justify-content: center;
+    color: black;
+    background: #E6F2F2;
+    height: 25px;
+}
+
+
+.password {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../assets/girl.jpg);
+        min-height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
