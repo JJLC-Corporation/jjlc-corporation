@@ -22,7 +22,7 @@ import DailyQuote from "./pages/DailyQuote"
 
 const App = (props) => {
   const [workouts, setWorkouts] = useState([])
-  
+  const [showCard, setShowCard] = useState({})
   useEffect(() => {
     readWorkout()
   }, [])
@@ -77,6 +77,12 @@ const App = (props) => {
     .finally(() => readWorkout())
   }
 
+    const getShowCard = () => {
+      fetch("/showcard/")
+      .then((response)=> response.json())
+      .then((payload)=> setShowCard(payload))
+      .catch((error)=> console.log("show last error", error))
+    }
   
   return (
     <BrowserRouter>

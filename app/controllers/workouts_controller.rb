@@ -5,6 +5,13 @@ class WorkoutsController < ApplicationController
         render json: workouts
     end
 
+    def show_last 
+        user = current_user
+
+        last_workout = user.workouts.last 
+        render json: last_workout
+    end
+
     def create
         workout = Workout.create(workout_params)
         if workout.valid?
