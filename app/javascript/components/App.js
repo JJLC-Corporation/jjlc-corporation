@@ -77,10 +77,6 @@ const App = (props) => {
     .finally(() => readWorkout())
   }
 
-  const ShowCard = ({ workouts }) => {
-  const { id } = useParams();
-  const workout = workouts?.find((workout) => workout.id === +id);
-  
   
   return (
     <BrowserRouter>
