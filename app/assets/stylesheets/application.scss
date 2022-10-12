@@ -1,3 +1,4 @@
+@import "bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Roboto&display=swap');
 
 main {
@@ -239,4 +240,47 @@ a {
     text-shadow: 2px 2px white;
 }
 
-@import "bootstrap";
+// AboutUs 
+
+.about-us-title{
+    display:flex;
+    justify-content: center;
+    font-size: 80px;
+    font-family: 'Anton', sans-serif;
+    padding: 60px;
+    letter-spacing: 0.1em;
+}
+
+.name{
+    font-family: 'Anton', sans-serif;
+    font-size: 40px;
+}
+
+.job{
+    font-family: 'Roboto', sans-serif;
+    font-size:20px;
+    color: #FF1B1C;
+}
+
+.about-div{
+    margin: '10px 20px'
+}
+
+.linkedin{
+    font-size: 15px;
+    color: #6E6E6E;
+    font-family: 'Roboto', sans-serif;
+    padding-right:10px;
+
+}
+
+.github{
+    font-size: 15px;
+    color: #6E6E6E;
+    font-family: 'Roboto', sans-serif;
+}
+
+.about-links{
+    display:flex;
+    flex-wrap: wrap;
+}
