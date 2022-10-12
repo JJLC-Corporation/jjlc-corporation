@@ -76,13 +76,17 @@ const App = (props) => {
     .catch((error) => console.log("delete error:", error))
     .finally(() => readWorkout())
   }
+
+  const ShowCard = ({ workouts }) => {
+  const { id } = useParams();
+  const workout = workouts?.find((workout) => workout.id === +id);
   
   
   return (
     <BrowserRouter>
     <Header {...props} />
     <Routes>
-    <Route exact path ="/dashboard" element={<Dashboard />} />
+    <Route exact path ="/dashboard" element={<Dashboard ShowCard={ShowCard} />} />
     <Route exact path="/" element={<Home {...props} />} />
     <Route exact path="/workoutindex" element={<WorkoutIndex workouts = { workouts } {...props} />} />
     <Route exact path="/workoutnew" element={<WorkoutNew createWorkout={createWorkout} {...props} />} />
