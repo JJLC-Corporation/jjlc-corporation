@@ -1,5 +1,7 @@
 import React, { Component, useState } from 'react';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'; 
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import {
   Carousel,
   CarouselItem,
@@ -9,12 +11,15 @@ import {
 } from 'reactstrap';
 
 
+
 const AboutUs = () => {
     return (
+      <>
       <div className="about-div">
-        <h2 className="about-us-title"><i>MEET THE TEAM</i></h2>
+        <h2 className="about-us-title"><i>MEET THE <span className="team-css">TEAM</span></i></h2>
         <AboutUsCarousel />
       </div>
+      </>
     );
   }
 
@@ -24,10 +29,8 @@ const items = [
     altText: 'Product Manager',
     caption: 'Luis Laurel',
     key: 1,
-    linkedin: (
-      <a href='https://www.linkedin.com/in/luislaurel/' target='blank'>LinkedIn</a>
-    ),
-    GitHub: <a href='https://github.com/luislaurel' target='blank'>GitHub</a>,
+    linkedin:'https://www.linkedin.com/in/luislaurel/',
+    GitHub: 'https://github.com/luislaurel',
     description:
       'Hi! My name is Luis, I am US Army veteran who has transitioned over to a FullStack Developer. I am excited about the Front-end of things and always looking to push myself to learn more!',
   },
@@ -92,53 +95,60 @@ function AboutUsCarousel(args) {
 
   const slides = items.map((item) => {
     return (
-      <CarouselItem
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
-        key={item.key}
-      >
-        <div style={{ display: 'flex', flexDirection: 'row' }}>
-          <div style={{ flex: '50%' }}>
-            <img className="about-img" style={{width:'350px', height:'350px'}} src={item.src} alt={item.altText} />
-          </div>
-          <div style={{ margin: 'auto 5px', flex: '50%' }}>
-            <h2 className="name">{item.caption}</h2>
-            <h3 className="job"><i>{item.altText}</i></h3>
-            <p className='description'>{item.description}</p>
-            <div className='about-links'>
-              <p className='linkedin'> {item.linkedin}</p>
-              <p className='github'> {item.GitHub}</p>
+        <CarouselItem
+          onExiting={() => setAnimating(true)}
+          onExited={() => setAnimating(false)}
+          key={item.key}
+        >
+          <div style={{ display: 'flex', flexDirection: 'row' }}>
+            <div className="about-content">
+              <img style={{width:'350px', height:'350px'}} src={item.src} alt={item.altText} />
+            </div>
+            <div style={{ margin: 'auto 5px', flex: '50%' }}>
+              <h2 className="name">{item.caption}</h2>
+              <h3 className="job"><i>{item.altText}</i></h3>
+              <p className='description'>{item.description}</p>
+              <div className='about-links'>
+                <a href={item.linkedin}className='linkedin' target='blank'><FontAwesomeIcon icon={faLinkedinIn} /></a>
+                <a href={item.GitHub}className='github' target='blank'><FontAwesomeIcon icon={faGithub} /></a>
+              </div>
             </div>
           </div>
-        </div>
-      </CarouselItem>
+        </CarouselItem>
     );
   });
 
   return (
-    <Carousel
-      className='about-us-container'
-      activeIndex={activeIndex}
-      next={next}
-      previous={previous}
-    >
-      <CarouselIndicators
-        items={items}
+    <>
+    <div className="about-bg">
+      <Carousel
+        className='about-us-container'
         activeIndex={activeIndex}
-        onClickHandler={goToIndex}
-      />
-      {slides}
-      <CarouselControl
-        direction='prev'
-        directionText='Previous'
-        onClickHandler={previous}
-      />
-      <CarouselControl
-        direction='next'
-        directionText='Next'
-        onClickHandler={next}
-      />
-    </Carousel>
+        next={next}
+        previous={previous}
+      >
+        <CarouselIndicators
+          items={items}
+          activeIndex={activeIndex}
+          onClickHandler={goToIndex}
+        />
+        {slides}
+        <CarouselControl
+          direction='prev'
+          directionText='Previous'
+          onClickHandler={previous}
+        />
+        <CarouselControl
+          direction='next'
+          directionText='Next'
+          onClickHandler={next}
+        />
+      </Carousel>
+      </div>
+        <div className="div-padding">
+        <img src="https://i.postimg.cc/L6vcPfgc/logo-1.png" className="about-logo"></img>
+        </div>
+    </>
   );
 }
 
