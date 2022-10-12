@@ -1,7 +1,18 @@
-<h2>Log in</h2>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  </head>
 
+  <body class="form-body">
+
+
+
+
+<div class="login">
+<div class="white-box">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
+  <div class="field" >
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
@@ -24,3 +35,13 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+
+</div>
+      <footer>
+          <a href='https://github.com/orgs/JJLC-Corporation/repositories'target="_blank" class="devise-footer">
+            © 2022 JJLC Corporation
+          </a>
+      </footer>      
+  </body>
+</html>
