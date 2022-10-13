@@ -28,7 +28,6 @@ const QuoteComp = () => {
 
 return (
     <>
-        <div>Daily Quote Component</div>
             <div className = "quote-box">
                 <div className="quote-text">
                     <p>{quote}</p>

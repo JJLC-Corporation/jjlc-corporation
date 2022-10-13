@@ -13,11 +13,13 @@ const Dashboard = (props) => {
   ,[])
   return (
     <>
-    <div>Dashboard</div>
-    <ShowCard/>
-    <QuoteComp/>
+      <>
+        <h1>{`Welcome, ${props.current_user.name}`}</h1>
+      </>
+      <QuoteComp />
+      <ShowCard />
     </>
-  )
+  );
 }
 
 export default Dashboard
