@@ -7,9 +7,8 @@ const WorkoutIndex = ({workouts, current_user }) => {
   console.log(workouts);
   return (
     <>
-    <div className="index-title">
-      <h1>YOUR WORKOUT PLAN</h1>
-    </div>
+    <div className="index-background">
+      <h1 className="index-title"><i>WORKOUT PLAN</i></h1>
       <div className="cards">
       {filteredWorkouts?.map((workout) => {
         return(
@@ -18,7 +17,7 @@ const WorkoutIndex = ({workouts, current_user }) => {
               width: '18rem'
             }}
           >
-            <CardHeader>
+            <CardHeader className="workout">
               Workout
             </CardHeader>
               <ListGroup>
@@ -32,7 +31,7 @@ const WorkoutIndex = ({workouts, current_user }) => {
                   Weight: {workout.weight}
                 </ListGroupItem>
                 <ListGroupItem>
-                  <Button>
+                  <Button color="danger">
                     <NavLink to={`/workoutshow/${workout.id}`}>
                     See Workout
                     </NavLink>
@@ -42,6 +41,7 @@ const WorkoutIndex = ({workouts, current_user }) => {
           </Card>
         )
       })}
+      </div>
       </div>
     </>
   )

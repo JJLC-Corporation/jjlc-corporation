@@ -389,8 +389,11 @@ a:hover {
     padding-top: 4rem;
     display: flex; 
     justify-content: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 130px;
+    font-size: 200px;
+    font-size: 80px;
+    color: #FFFFFC;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.1em;
 }
 
 .cards{
@@ -401,3 +404,10 @@ a:hover {
     grid-gap: 60px;
 }
 
+.workout{
+    background-color:white;
+}
+
+.index-background{
+    background-color: black;
+}
