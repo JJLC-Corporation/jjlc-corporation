@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Form, Row, Col, FormGroup, Label, Input, Button } from "reactstrap";
+import { Form, Row, Col, FormGroup, Label, Input, Button, Card } from "reactstrap";
 
 const WorkoutNew = ({ createWorkout, logged_in, current_user }) => {
   const navigate = useNavigate();
@@ -23,6 +23,8 @@ console.log('workoutnew',current_user);
     <>
       {logged_in && <h1>Add A Workout</h1>}
       {logged_in && (
+        <div className="form">
+        <Card className="new-form" style={{height:'15rem', width:'40rem'}}>
         <Form>
           <Row>
             <Col md={6}>
@@ -64,6 +66,8 @@ console.log('workoutnew',current_user);
             Submit your workout
           </Button>
         </Form>
+        </Card>
+        </div>
       )}
       {!logged_in && <h1>Please sign in</h1>}
     </>

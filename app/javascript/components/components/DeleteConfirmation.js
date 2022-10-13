@@ -15,6 +15,7 @@ const DeleteConfirmation = ({handleDelete}) => {
          <Button
             name="submit"
             onClick={toggle}
+            color="danger"
          >
             Delete Workout
          </Button>

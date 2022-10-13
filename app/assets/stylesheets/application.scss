@@ -397,7 +397,7 @@ a:hover {
 .cards{
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     padding: 100px;
     grid-gap: 60px;
 }
@@ -443,6 +443,7 @@ a:hover {
     flex-wrap: wrap;
     padding-right: 5px;
     justify-content:center;
+    padding-top: 80px;
 }
 
 .card-content{
@@ -457,4 +458,23 @@ a:hover {
 
 .edit-b{
     padding-right: 10px;
+}
+
+.edit-button{
+    padding-right: 40px;
+}
+
+// New Form
+
+.new-form{
+    
+}
+
+.form{
+    padding: 120px;
+    text-align: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
 }

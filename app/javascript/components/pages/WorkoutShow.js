@@ -18,16 +18,18 @@ const WorkoutShow = ({ workouts, deleteWorkout }) => {
       <i><span className="my-title">My</span> Workout</i>
     </h1>
       <div className="WorkoutShow">
-        <Card style={{ width: '25rem', height: '25rem' }} >
+        <Card style={{ width: '25rem', height: '20rem' }} >
           <CardBody>
             <CardTitle tag="h5" className="card-t">{workout.name}</CardTitle>
             <CardText>SetsxReps: {workout.set_reps}</CardText>
             <CardText>Weight: {workout.weight}lbs</CardText>
               <div className="b-style">
+                <div className="edit-button">
                 <NavLink to={`/workoutedit/${workout.id}`} >
-                  <Button>Edit Workout</Button>
+                  <Button color="danger">Edit Workout</Button>
                 </NavLink>
-                <DeleteConfirmation handleDelete={handleDelete}/>
+                </div>
+                <DeleteConfirmation  color="danger" handleDelete={handleDelete} />
               </div>
           </CardBody>
         </Card>
