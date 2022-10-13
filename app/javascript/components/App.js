@@ -17,12 +17,12 @@ import Navigation from "./components/Navigation"
 import Sidebar from "./components/Sidebar"
 import "./app.css"
 import DailyQuote from "./pages/DailyQuote"
-
+import ShowCard from "./components/ShowCard"
 
 
 const App = (props) => {
   const [workouts, setWorkouts] = useState([])
-  const [showCard, setShowCard] = useState({})
+  
   useEffect(() => {
     readWorkout()
   }, [])
@@ -77,18 +77,13 @@ const App = (props) => {
     .finally(() => readWorkout())
   }
 
-    const getShowCard = () => {
-      fetch("/showcard/")
-      .then((response)=> response.json())
-      .then((payload)=> setShowCard(payload))
-      .catch((error)=> console.log("show last error", error))
-    }
+    
   
   return (
     <BrowserRouter>
     <Header {...props} />
     <Routes>
-    <Route exact path ="/dashboard" element={<Dashboard />} />
+    <Route exact path ="/dashboard" element={<Dashboard {...props} />} />
     <Route exact path="/" element={<Home {...props} />} />
     <Route exact path="/workoutindex" element={<WorkoutIndex workouts = { workouts } {...props} />} />
     <Route exact path="/workoutnew" element={<WorkoutNew createWorkout={createWorkout} {...props} />} />
