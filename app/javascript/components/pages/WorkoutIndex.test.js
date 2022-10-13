@@ -11,7 +11,7 @@ describe('WorkoutIndex', () => {
                 <WorkoutIndex />
             </BrowserRouter>
         )
-        const workoutIndexText = screen.getByText(/All Workouts/i)
+        const workoutIndexText = screen.getByText(/Your Workout Plan/i)
         expect(workoutIndexText).toBeInTheDocument()
     })
 })

@@ -7,38 +7,42 @@ const WorkoutIndex = ({workouts, current_user }) => {
   console.log(workouts);
   return (
     <>
-    <h1>All Workouts</h1>
-    {filteredWorkouts?.map((workout) => {
-      return(
-        <Card
-          style={{
-            width: '18rem'
-          }}
-        >
-          <CardHeader>
-            Workout
-          </CardHeader>
-            <ListGroup>
-              <ListGroupItem>
-                Name: {workout.name}
-              </ListGroupItem>
-              <ListGroupItem>
-                Sets/Reps: {workout.set_reps}
-              </ListGroupItem>
-              <ListGroupItem>
-                Weight: {workout.weight}
-              </ListGroupItem>
-              <ListGroupItem>
-                <Button>
-                  <NavLink to={`/workoutshow/${workout.id}`}>
-                  See Workout
-                  </NavLink>
-                </Button>
-              </ListGroupItem> 
-            </ListGroup>
-        </Card>
-      )
-    })}
+    <div className="index-title">
+      <h1>YOUR WORKOUT PLAN</h1>
+    </div>
+      <div className="cards">
+      {filteredWorkouts?.map((workout) => {
+        return(
+          <Card
+            style={{
+              width: '18rem'
+            }}
+          >
+            <CardHeader>
+              Workout
+            </CardHeader>
+              <ListGroup>
+                <ListGroupItem className="list-group-item">
+                  Name: {workout.name}
+                </ListGroupItem>
+                <ListGroupItem>
+                  Sets/Reps: {workout.set_reps}
+                </ListGroupItem>
+                <ListGroupItem>
+                  Weight: {workout.weight}
+                </ListGroupItem>
+                <ListGroupItem>
+                  <Button>
+                    <NavLink to={`/workoutshow/${workout.id}`}>
+                    See Workout
+                    </NavLink>
+                  </Button>
+                </ListGroupItem> 
+              </ListGroup>
+          </Card>
+        )
+      })}
+      </div>
     </>
   )
 }

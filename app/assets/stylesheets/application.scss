@@ -382,3 +382,22 @@ a:hover {
         background-size: cover;
         background-repeat: no-repeat;
     }
+
+    // Index Page 
+
+.index-title{
+    padding-top: 4rem;
+    display: flex; 
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 130px;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 100px;
+    grid-gap: 60px;
+}
+
