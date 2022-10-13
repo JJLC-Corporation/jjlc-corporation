@@ -17,7 +17,6 @@ describe "POST / create" do
       }
       post '/workouts', params: workout_params
 
-      workout = Workout.first
 
       json = JSON.parse(response.body).deep_symbolize_keys
       expect(response).to have_http_status(200)
@@ -225,6 +224,23 @@ describe "POST / create" do
       expect(response.status).to eq(204)
       workouts = Workout.all
       expect(workouts).to be_empty
+    end
+  end
+    describe "GET /showcard" do
+  it "Shows the last workout" do
+      sign_in(user)
+      Workout.create(
+        name: 'Squat',
+        set_reps: '10x3',
+        weight: 225,
+        user_id: user.id
+      )
+      get "/showcard/"
+      expect(response.status).to eq(200)
+      json = JSON.parse(response.body).deep_symbolize_keys
+      expect(response).to have_http_status(200)
+      expect(json[:name]).to eq("Squat")
+      expect(json[:set_reps]).to eq("10x3")
     end
   end
 end
