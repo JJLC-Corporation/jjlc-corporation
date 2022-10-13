@@ -391,9 +391,10 @@ a:hover {
     justify-content: center;
     font-size: 200px;
     font-size: 80px;
-    color: #FFFFFC;
+    color: white;
     font-family: 'Anton', sans-serif;
     letter-spacing: 0.1em;
+
 }
 
 .cards{
@@ -409,5 +410,10 @@ a:hover {
 }
 
 .index-background{
-    background-color: black;
+    background-color: #E6F2F2;
+}
+
+.plan{
+    color: #FF1B1C;
+    
 }

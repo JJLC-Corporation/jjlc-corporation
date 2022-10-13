@@ -8,7 +8,7 @@ const WorkoutIndex = ({workouts, current_user }) => {
   return (
     <>
     <div className="index-background">
-      <h1 className="index-title"><i>WORKOUT PLAN</i></h1>
+      <h1 className="index-title"><i>WORKOUT <span className="plan">PLAN</span></i></h1>
       <div className="cards">
       {filteredWorkouts?.map((workout) => {
         return(
@@ -28,7 +28,7 @@ const WorkoutIndex = ({workouts, current_user }) => {
                   Sets/Reps: {workout.set_reps}
                 </ListGroupItem>
                 <ListGroupItem>
-                  Weight: {workout.weight}
+                  Weight: {workout.weight}lbs
                 </ListGroupItem>
                 <ListGroupItem>
                   <Button color="danger">
