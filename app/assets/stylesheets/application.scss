@@ -437,4 +437,20 @@ a:hover {
 .b-style{
     display:flex;
     flex-wrap: wrap;
+    padding-right: 5px;
+    justify-content:center;
+}
+
+.card-content{
+    padding: 10px;
+}
+
+.card-t{
+    font-size:40px;
+    padding-top: 20px;
+
+}
+
+.edit-b{
+    padding-right: 10px;
 }
