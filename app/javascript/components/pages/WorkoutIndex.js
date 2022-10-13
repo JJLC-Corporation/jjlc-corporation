@@ -25,7 +25,7 @@ const WorkoutIndex = ({workouts, current_user }) => {
                   Name: {workout.name}
                 </ListGroupItem>
                 <ListGroupItem>
-                  Sets/Reps: {workout.set_reps}
+                  SetsxReps: {workout.set_reps}
                 </ListGroupItem>
                 <ListGroupItem>
                   Weight: {workout.weight}lbs

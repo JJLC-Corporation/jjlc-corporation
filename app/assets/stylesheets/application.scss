@@ -53,9 +53,6 @@ a {
     align-items: center;
 }
 
-.WorkoutShow {
-    padding: 175px;
-}
 
 /* home  */
 
@@ -416,4 +413,28 @@ a:hover {
 .plan{
     color: #FF1B1C;
     
+}
+
+// Show Page 
+
+.show-title{
+    color: #FF1B1C;
+    padding-top: 4rem;
+    display: flex; 
+    justify-content: center;
+    font-size: 200px;
+    font-size: 80px;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.1em;
+}
+
+.WorkoutShow {
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.b-style{
+    display:flex;
+    flex-wrap: wrap;
 }

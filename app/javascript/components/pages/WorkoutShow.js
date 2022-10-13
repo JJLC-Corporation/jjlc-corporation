@@ -14,16 +14,19 @@ const WorkoutShow = ({ workouts, deleteWorkout }) => {
 
   return (
     <>
+    <h1 className="show-title"><i>My Workout</i></h1>
       <div className="WorkoutShow">
-        <Card>
+        <Card style={{ width: '25rem', height: '25rem' }} >
           <CardBody>
-            <CardTitle tag="h5">{workout.name}</CardTitle>
-            <CardText>Sets x Reps {workout.set_reps}</CardText>
-            <CardText>Weight: {workout.weight}</CardText>
-            <NavLink to={`/workoutedit/${workout.id}`} className="nav-link">
-              <Button>Edit Workout</Button>
-            </NavLink>
-            <DeleteConfirmation handleDelete={handleDelete}/>
+            <CardTitle tag="h5">Name:{workout.name}</CardTitle>
+            <CardText>SetsxReps: {workout.set_reps}</CardText>
+            <CardText>Weight: {workout.weight}lbs</CardText>
+              <div className="b-style">
+                <NavLink to={`/workoutedit/${workout.id}`} className="nav-link">
+                  <Button>Edit Workout</Button>
+                </NavLink>
+                <DeleteConfirmation handleDelete={handleDelete}/>
+              </div>
           </CardBody>
         </Card>
       </div>
