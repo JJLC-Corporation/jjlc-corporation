@@ -12,13 +12,7 @@ import WorkoutNew from "./pages/WorkoutNew"
 import WorkoutShow from "./pages/WorkoutShow"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Footer from "./components/Footer"
-import Navbar from "./components/Navbar"
-import Navigation from "./components/Navigation"
-import Sidebar from "./components/Sidebar"
-import "./app.css"
-import DailyQuote from "./pages/DailyQuote"
-import ShowCard from "./components/ShowCard"
-import QuoteComp from "./components/QuoteComp"
+
 
 
 const App = (props) => {
