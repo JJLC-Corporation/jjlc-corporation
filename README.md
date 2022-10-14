@@ -91,7 +91,7 @@
 - **Design Lead - Jason Brown** - [LinkedIn]() - [GitHub](https://github.com/jayaries329)
 
 ## Special shoutout
-<p>A special thank you to all the LEARN Academy instructors who have helped us get this far! It has been an amazing journey and now ourselves as FullStack Devs will go even further!</p>
+<p>A special thank you to all the LEARN Academy instructors who have helped us get this far! It has been an amazing journey and now ourselves as FullStack Devs will go even further!</p> ❤️
  
 [LEARN Academy](https://www.learnacademy.org/) 
 - Our Instructors!
