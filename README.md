@@ -5,7 +5,7 @@
 ## Link to live website
 [Heroku](https://dotlift.herokuapp.com/)
 
-## Our Features
+## Our Features :weight_lifting_woman:
 
 <ul>
 <li>Login to see a personalized dashboard</li>
