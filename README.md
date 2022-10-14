@@ -96,4 +96,4 @@
 [LEARN Academy](https://www.learnacademy.org/) 
 - Our Instructors!
 - [Austin Walker ](https://www.linkedin.com/in/walkertexas-coder/)
--[Charlean Baxter](https://www.linkedin.com/in/cmb-charlean-baxter/)
+- [Charlean Baxter](https://www.linkedin.com/in/cmb-charlean-baxter/)
