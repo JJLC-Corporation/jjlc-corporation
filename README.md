@@ -8,10 +8,11 @@
 ## Our Features :weight_lifting_woman:
 
 <ul>
-<li>Login to see a personalized dashboard</li>
+<li>Create an account</li>
+<li>See a dashboard with your workouts, and some motivation!</li>
 <li>Create a workout</li>
 <li>Edit/Delete a workout</li>
-<li>See your latest workout on the dashboard</li>
+<li>See your last created workout on the dashboard</li>
 <li>Get a resource page filled with tutorials to help you out!</li>
 </ul>
 
