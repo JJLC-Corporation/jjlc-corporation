@@ -5,6 +5,16 @@
 ## Link to live website
 [Heroku](https://dotlift.herokuapp.com/)
 
+## Our Features
+
+<ul>
+<li>Login to see a personalized dashboard</li>
+<li>Create a workout</li>
+<li>Edit/Delete a workout</li>
+<li>See your latest workout on the dashboard</li>
+<li>Get a resource page filled with tutorials to help you out!</li>
+</ul>
+
 ## Running this locally
 
 <ul>
