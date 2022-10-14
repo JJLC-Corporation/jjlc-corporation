@@ -89,4 +89,7 @@
 - **Tech Lead - Cody Mundy** - [LinkedIn](https://www.linkedin.com/in/cody-l-mundy/) - [GitHub](https://github.com/HeavyArms0511)
 
 - **Design Lead - Jason Brown** - [LinkedIn]() - [GitHub](https://github.com/jayaries329)
+
+## Special shoutout
+<p>A special thank you to all the LEARN Academy instructors who have helped us get this far! It has been an amazing journey and now ourselves as FullStack Devs will go even further!</p>
  
