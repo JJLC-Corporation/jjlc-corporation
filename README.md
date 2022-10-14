@@ -1,4 +1,4 @@
-# Welcome to .Lift()!
+# Welcome to .Lift(:weight_lifting_man:)!
 
 <p>Can you recall a time where you felt lost and confused at the gym, wondering what you should do next? Yeah, us too... Too many times to admit. But here's the thing - no longer are the days you feel lost because we solved this issue! With .Lift(), you have the ability to plan your workout session before you head to the gym. Create your workout plan, see your session, edit your entry if you need to go higher in weight, or delete a workout if you don't feel like doing that exercise - it's all up to you.</p>
 
