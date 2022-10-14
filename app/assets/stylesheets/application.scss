@@ -53,9 +53,6 @@ a {
     align-items: center;
 }
 
-.WorkoutShow {
-    padding: 175px;
-}
 
 /* home  */
 
@@ -305,11 +302,15 @@ a {
 
 .description{
     color: white;
+    padding-right:60px;
 }
 
 .about-content{
     flex: 40%;
-    padding: 40px;
+    padding-top: 40px;
+    padding-bottom:40px;
+    padding-left:40px;
+    padding-right:20px;
     
 }
 
@@ -382,6 +383,228 @@ a:hover {
         background-size: cover;
         background-repeat: no-repeat;
     }
+
+    // Index Page 
+
+.index-title{
+    padding-top: 4rem;
+    display: flex; 
+    justify-content: center;
+    font-size: 120px;
+    color: white;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.1em;
+
+}
+
+.cards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+    padding: 100px;
+    grid-gap: 60px;
+}
+
+
+.workout{
+    background-color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.index-background{
+    background-color: #BEB7A4;
+}
+
+.index-b{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.plan{
+    color: #FF1B1C;
+    
+}
+
+// Show Page 
+
+.show-bg{
+    background-color: #BEB7A4;
+}
+
+.show-title{
+    color: #FF1B1C;
+    padding-top: 4rem;
+    display: flex; 
+    justify-content: center;
+    font-size: 120px;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.1em;
+}
+
+.my-title{
+    color: white;
+}
+
+.WorkoutShow {
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.b-style{
+    display:flex;
+    flex-wrap: wrap;
+    padding-right: 5px;
+    justify-content:center;
+    padding-top: 90px;
+    
+}
+
+.card-content{
+    padding: 10px;
+}
+
+.card-t{
+    font-size:40px;
+    padding-top: 20px;
+    padding-bottom:20px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.show-info{
+    padding-left: 20px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.edit-button{
+    padding-right: 40px;
+}
+
+// New Form
+
+.form{
+    padding-top: 150px;
+    text-align: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-left:40px;
+    padding-right:40px;
+
+}
+
+.new-bg {
+    background-color:#FF1B1C;
+    min-height: 100vh;
+}
+
+.new-title{
+    color: white;
+    font-family: 'Anton', sans-serif;
+    font-size: 100px;
+    letter-spacing: 0.1em;
+    line-height: 90%;
+    font-size:115px;
+
+}
+
+.title-div{
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.components{
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content:space-around;
+    padding: 40px;
+}
+
+.new-form-group{
+    padding-top: 20px;
+}
+
+.new-button{
+    padding-top:20px;
+}
+
+.title-color{
+    color: #BEB7A4;
+}
+
+// Edit Form 
+
+.edit-bg {
+    background-color:black;
+    min-height: 100vh;
+
+}
+
+.edit-form{
+    padding-top: 150px;
+    text-align: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-left:40px;
+    padding-right:40px;
+
+}
+
+
+.edit-title{
+    color: white;
+    font-family: 'Anton', sans-serif;
+    font-size: 100px;
+    letter-spacing: 0.1em;
+    line-height: 90%;
+    font-size:115px;
+
+}
+
+.edit-title2{
+    color: #BEB7A4;
+    font-family: 'Anton', sans-serif;
+    font-size: 100px;
+    letter-spacing: 0.1em;
+    line-height: 90%;
+    font-size:115px;
+
+}
+
+.edit-title-div{
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.edit-components{
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content:space-around;
+    padding: 40px;
+}
+
+.edit-form-group{
+    padding-top: 20px;
+}
+
+.edit-form-button{
+    padding-top:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
 
 
 // Quote Component

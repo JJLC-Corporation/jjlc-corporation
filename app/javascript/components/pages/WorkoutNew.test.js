@@ -24,7 +24,7 @@ describe("<WorkoutNew/>", () => {
             </BrowserRouter>
             )
 
-        const heading = screen.getByRole("heading", {name: /Add a Workout/i})
+        const heading = screen.getByRole("heading", {name: /ADD/i})
 
         expect(heading).toBeInTheDocument()
     })

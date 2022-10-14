@@ -8,24 +8,50 @@ const WorkoutShow = ({ workouts, deleteWorkout }) => {
   const workout = workouts?.find((workout) => workout.id === +id);
 
   const handleDelete = () => {
-    deleteWorkout(id)
-    console.log(workout)
-  }
+    deleteWorkout(id);
+    console.log(workout);
+  };
 
   return (
     <>
-      <div className="WorkoutShow">
-        <Card>
-          <CardBody>
-            <CardTitle tag="h5">{workout.name}</CardTitle>
-            <CardText>Sets x Reps {workout.set_reps}</CardText>
-            <CardText>Weight: {workout.weight}</CardText>
-            <NavLink to={`/workoutedit/${workout.id}`} className="nav-link">
-              <Button>Edit Workout</Button>
-            </NavLink>
-            <DeleteConfirmation handleDelete={handleDelete}/>
-          </CardBody>
-        </Card>
+      <div className="show-bg">
+        <h1 className="show-title">
+          <i>
+            <span className="my-title">MY</span> WORKOUT
+          </i>
+        </h1>
+        <div className="WorkoutShow">
+          <Card style={{ width: "25rem", height: "25rem" }}>
+            <CardBody>
+              <CardTitle tag="h5" className="card-t">
+                {workout.name}
+              </CardTitle>
+              <CardText className="show-info">
+                <b>SetsxReps:</b> {workout.set_reps}
+              </CardText>
+              <CardText className="show-info">
+                <b>Weight:</b> {workout.weight}lbs
+              </CardText>
+              <div className="b-style">
+                <div className="edit-button">
+                  <NavLink to={`/workoutedit/${workout.id}`}>
+                    <Button color="danger">Edit Workout</Button>
+                  </NavLink>
+                </div>
+                <DeleteConfirmation
+                  color="danger"
+                  handleDelete={handleDelete}
+                />
+              </div>
+            </CardBody>
+          </Card>
+        </div>
+        <div className="div-padding">
+          <img
+            src="https://i.postimg.cc/L6vcPfgc/logo-1.png"
+            className="about-logo"
+          ></img>
+        </div>
       </div>
     </>
   );

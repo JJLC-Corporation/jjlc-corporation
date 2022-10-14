@@ -12,9 +12,10 @@ const DeleteConfirmation = ({handleDelete}) => {
 
    return (
       <div>
-         <Button
+         <Button 
             name="submit"
             onClick={toggle}
+            color="danger"
          >
             Delete Workout
          </Button>
