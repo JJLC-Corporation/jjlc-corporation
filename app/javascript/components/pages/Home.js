@@ -12,8 +12,8 @@ const Home = ({
       <div className="home-title">
         <h1 className="title"><i>LET'S GO <span className="title-1">.LIFT( )</span></i></h1>
           <div className="space-button">
-            <a href={sign_in_route}>
-              <button className="button">LOGIN</button>
+            <a style={{ textDecoration: 'none' }}href={sign_in_route}>
+              <button className="button" >LOGIN</button>
             </a>
           </div>
       </div>

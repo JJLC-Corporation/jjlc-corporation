@@ -21,7 +21,8 @@ const WorkoutNew = ({ createWorkout, logged_in, current_user }) => {
 console.log('workoutnew',current_user);
   return (
     <>
-      {logged_in && <h1>Add A Workout</h1>}
+    <div className="new-bg">
+      {logged_in && <h1 className="new-title">ADD YOUR WORKOUT</h1>}
       {logged_in && (
         <div className="form">
         <Card className="new-form" style={{height:'15rem', width:'40rem'}}>
@@ -63,12 +64,13 @@ console.log('workoutnew',current_user);
             />
           </FormGroup>
           <Button onClick={handleSubmit} name="submit">
-            Submit your workout
+            Submit workout
           </Button>
         </Form>
         </Card>
         </div>
       )}
+      </div>
       {!logged_in && <h1>Please sign in</h1>}
     </>
   );

@@ -33,7 +33,7 @@ const WorkoutIndex = ({workouts, current_user }) => {
                 <ListGroupItem>
                   <div className="index-b">
                   <Button color="danger">
-                    <NavLink to={`/workoutshow/${workout.id}`}>
+                    <NavLink to={`/workoutshow/${workout.id}`} style={{ textDecoration: 'none' }}>
                     See Workout
                     </NavLink>
                   </Button>
