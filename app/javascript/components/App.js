@@ -12,11 +12,6 @@ import WorkoutNew from "./pages/WorkoutNew"
 import WorkoutShow from "./pages/WorkoutShow"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Footer from "./components/Footer"
-import Navbar from "./components/Navbar"
-import Navigation from "./components/Navigation"
-import Sidebar from "./components/Sidebar"
-import "./app.css"
-import DailyQuote from "./pages/DailyQuote"
 
 
 
@@ -77,12 +72,13 @@ const App = (props) => {
     .finally(() => readWorkout())
   }
 
+    
   
   return (
     <BrowserRouter>
     <Header {...props} />
     <Routes>
-    <Route exact path ="/dashboard" element={<Dashboard />} />
+    <Route exact path ="/dashboard" element={<Dashboard {...props} />} />
     <Route exact path="/" element={<Home {...props} />} />
     <Route exact path="/workoutindex" element={<WorkoutIndex workouts = { workouts } {...props} />} />
     <Route exact path="/workoutnew" element={<WorkoutNew createWorkout={createWorkout} {...props} />} />
@@ -91,7 +87,6 @@ const App = (props) => {
     <Route exact path="/*" element={<NotFound />} />
     <Route exact path="/workoutedit/:id"  element={<WorkoutEdit workouts = {workouts} {...props} updateWorkout={updateWorkout}/>} />
     <Route exact path="/workoutshow/:id"  element={<WorkoutShow workouts = {workouts} deleteWorkout = { deleteWorkout } {...props} />} />
-    <Route exact path="/dailyquote" element={<DailyQuote/>} />
     </Routes>
     <Footer />
   </BrowserRouter>

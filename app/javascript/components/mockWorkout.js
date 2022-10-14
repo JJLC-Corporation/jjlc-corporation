@@ -1,5 +1,3 @@
-
-
 const mockWorkouts = [
   {
     name: "bench press",
