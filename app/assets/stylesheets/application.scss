@@ -483,22 +483,56 @@ a:hover {
 
 // New Form
 
-.new-form{
-    
-}
-
 .form{
-    padding: 120px;
+    padding-top: 150px;
     text-align: center;
     display:flex;
     justify-content:center;
     align-items:center;
+    padding-left:40px;
+    padding-right:40px;
 
 }
 
 .new-bg {
-    background-image: url(https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fGd5bXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60);
+    background-color:#FF1B1C;
     min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.new-title{
+    color: white;
+    font-family: 'Anton', sans-serif;
+    font-size: 100px;
+    letter-spacing: 0.1em;
+    line-height: 80%;
+    font-size:115px;
+
+}
+
+.title-div{
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.components{
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content:space-around;
+    padding: 40px;
+}
+
+.new-form-group{
+    padding-top: 20px;
+}
+
+.new-button{
+    padding-top:20px;
+}
+
+.title-color{
+    color: #BEB7A4;
 }

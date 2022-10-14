@@ -22,14 +22,18 @@ console.log('workoutnew',current_user);
   return (
     <>
     <div className="new-bg">
-      {logged_in && <h1 className="new-title">ADD YOUR WORKOUT</h1>}
+      <div className="components">
+      {logged_in && 
+        <div className="title-div">
+          <h1 className="new-title">ADD<span className="title-color"><i>YOUR</i></span></h1> 
+          <h1 className="new-title">WORKOUT</h1>
+        </div>
+      }
       {logged_in && (
         <div className="form">
-        <Card className="new-form" style={{height:'15rem', width:'40rem'}}>
+        <Card style={{height:'27rem', width:'25rem'}}>
         <Form>
-          <Row>
-            <Col md={6}>
-              <FormGroup>
+              <FormGroup className="new-form-group">
                 <Label for="name">Name</Label>
                 <Input
                   name="name"
@@ -39,8 +43,6 @@ console.log('workoutnew',current_user);
                   value={newWorkout.name}
                 />
               </FormGroup>
-            </Col>
-            <Col md={6}>
               <FormGroup>
                 <Label for="set_reps">Sets x Reps</Label>
                 <Input
@@ -51,8 +53,6 @@ console.log('workoutnew',current_user);
                   value={newWorkout.set_reps}
                 />
               </FormGroup>
-            </Col>
-          </Row>
           <FormGroup>
             <Label for="weight">Weight</Label>
             <Input
@@ -63,13 +63,19 @@ console.log('workoutnew',current_user);
               value={newWorkout.weight}
             />
           </FormGroup>
-          <Button onClick={handleSubmit} name="submit">
+          <div className="new-button">
+          <Button onClick={handleSubmit} color="danger" name="submit">
             Submit workout
           </Button>
+          </div>
         </Form>
         </Card>
         </div>
       )}
+        <div className="div-padding">
+        <img src="https://i.postimg.cc/L6vcPfgc/logo-1.png" className="about-logo"></img>
+        </div>
+      </div>
       </div>
       {!logged_in && <h1>Please sign in</h1>}
     </>
