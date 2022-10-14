@@ -13,7 +13,7 @@
 </ul>
 
 #### Run the following commands
-<ol>
+<ul>
 <li>$ yarn add react-router-dom</li>
 <li>yarn add @fortawesome/fontawesome-svg-core</li>
 <li>yarn add @fortawesome/free-solid-svg-icons</li>
@@ -24,7 +24,7 @@
 <li>$ bundle</li>
 <li>$ rails db:setup</li>
 <li>$ rails s to start the server!
-</ol>
+</ul>
 
 ## Languages
 <ul>
