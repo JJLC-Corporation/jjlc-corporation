@@ -14,10 +14,15 @@
 
 #### Run the following commands
 <ol>
+<li>$ yarn add react-router-dom</li>
+<li>yarn add @fortawesome/fontawesome-svg-core</li>
+<li>yarn add @fortawesome/free-solid-svg-icons</li>
+<li>yarn add @fortawesome/free-regular-svg-icons</li>
+<li>yarn add @fortawesome/react-fontawesome@latest</li>
+<li>yarn add @fortawesome/free-brands-svg-icons</li>
 <li>$ yarn</li>
 <li>$ bundle</li>
 <li>$ rails db:setup</li>
-<li>$ yarn add react-router-dom</li>
 <li>$ rails s to start the server!
 </ol>
 
