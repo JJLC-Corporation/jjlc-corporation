@@ -497,8 +497,6 @@ a:hover {
 .new-bg {
     background-color:#FF1B1C;
     min-height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .new-title{
@@ -506,7 +504,7 @@ a:hover {
     font-family: 'Anton', sans-serif;
     font-size: 100px;
     letter-spacing: 0.1em;
-    line-height: 80%;
+    line-height: 90%;
     font-size:115px;
 
 }
@@ -536,3 +534,71 @@ a:hover {
 .title-color{
     color: #BEB7A4;
 }
+
+// Edit Form 
+
+.edit-bg {
+    background-color:black;
+    min-height: 100vh;
+
+}
+
+.edit-form{
+    padding-top: 150px;
+    text-align: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-left:40px;
+    padding-right:40px;
+
+}
+
+
+.edit-title{
+    color: white;
+    font-family: 'Anton', sans-serif;
+    font-size: 100px;
+    letter-spacing: 0.1em;
+    line-height: 90%;
+    font-size:115px;
+
+}
+
+.edit-title2{
+    color: #BEB7A4;
+    font-family: 'Anton', sans-serif;
+    font-size: 100px;
+    letter-spacing: 0.1em;
+    line-height: 90%;
+    font-size:115px;
+
+}
+
+.edit-title-div{
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.edit-components{
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content:space-around;
+    padding: 40px;
+}
+
+.edit-form-group{
+    padding-top: 20px;
+}
+
+.edit-button{
+    padding-top:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, FormGroup, Label, Input, Button } from "reactstrap";
+import { Form, FormGroup, Label, Input, Button, Card } from "reactstrap";
 import { useNavigate, useParams } from "react-router-dom";
 
 
@@ -20,12 +20,20 @@ const WorkoutEdit = ({ workouts, updateWorkout, logged_in}) => {
     navigate("/workoutindex");
   };
   return (
-    <div className="Update">
       <>
-        {logged_in && <h2> Update Workout </h2>}
+      <div className="edit-bg">
+      <div className="edit-components">
+        {logged_in && 
+        <div className="edit-title-div">
+        <h1 className="edit-title">MAKE A </h1>
+          <h1 className="edit-title2"><i>CHANGE</i></h1>
+        </div>
+        }
         {logged_in && (
+          <div className="edit-form">
+            <Card style={{height:'27rem', width:'25rem'}}>
           <Form>
-            <FormGroup>
+            <FormGroup className="edit-form-group">
               <Label for="name">Workout Name</Label>
               <Input
                 name="name"
@@ -51,14 +59,19 @@ const WorkoutEdit = ({ workouts, updateWorkout, logged_in}) => {
                 value={workouts.weight}
               />
             </FormGroup>
-            <Button onClick={handleSubmit} name="submit">
-              Update
+            <div className="edit-button">
+            <Button onClick={handleSubmit} name="submit" color="danger">
+              Update Workout
             </Button>
+            </div>
           </Form>
+          </Card>
+          </div>
         )}
+        </div>
+        </div>
         {!logged_in && <h1>Please sign in</h1>}
       </>
-    </div>
   );
 };
 

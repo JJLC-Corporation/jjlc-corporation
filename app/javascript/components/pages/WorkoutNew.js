@@ -21,7 +21,7 @@ const WorkoutNew = ({ createWorkout, logged_in, current_user }) => {
 console.log('workoutnew',current_user);
   return (
     <>
-    <div className="new-bg">
+    <div className="new-bg"> 
       <div className="components">
       {logged_in && 
         <div className="title-div">
@@ -34,7 +34,7 @@ console.log('workoutnew',current_user);
         <Card style={{height:'27rem', width:'25rem'}}>
         <Form>
               <FormGroup className="new-form-group">
-                <Label for="name">Name</Label>
+                <Label for="name">Workout Name</Label>
                 <Input
                   name="name"
                   placeholder="Enter a name for your workout"
@@ -65,16 +65,13 @@ console.log('workoutnew',current_user);
           </FormGroup>
           <div className="new-button">
           <Button onClick={handleSubmit} color="danger" name="submit">
-            Submit workout
+            Submit Workout
           </Button>
           </div>
         </Form>
         </Card>
         </div>
       )}
-        <div className="div-padding">
-        <img src="https://i.postimg.cc/L6vcPfgc/logo-1.png" className="about-logo"></img>
-        </div>
       </div>
       </div>
       {!logged_in && <h1>Please sign in</h1>}
