@@ -101,3 +101,5 @@
 - [Austin Walker](https://www.linkedin.com/in/walkertexas-coder/)
 - [Charlean Baxter](https://www.linkedin.com/in/cmb-charlean-baxter/)
 
+- Mentor: Ryan Lewis - Gave us newfound git knowledge and helped us work through blockers 🖥️ 🖱️
+
