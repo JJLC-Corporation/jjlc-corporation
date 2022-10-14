@@ -59,7 +59,7 @@ const WorkoutEdit = ({ workouts, updateWorkout, logged_in}) => {
                 value={workouts.weight}
               />
             </FormGroup>
-            <div className="edit-button">
+            <div className="edit-form-button">
             <Button onClick={handleSubmit} name="submit" color="danger">
               Update Workout
             </Button>
