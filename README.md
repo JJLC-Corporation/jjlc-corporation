@@ -98,6 +98,6 @@
 [LEARN Academy](https://www.learnacademy.org/) 
 <p>A special thank you to all the LEARN Academy instructors who have helped us get this far! It has been an amazing journey and now ourselves as FullStack Devs will go even further!❤️</p>
 - Our Instructors!
-- [Austin Walker ](https://www.linkedin.com/in/walkertexas-coder/)
+- [Austin Walker](https://www.linkedin.com/in/walkertexas-coder/)
 - [Charlean Baxter](https://www.linkedin.com/in/cmb-charlean-baxter/)
 
