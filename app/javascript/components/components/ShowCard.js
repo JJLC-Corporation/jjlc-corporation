@@ -3,6 +3,11 @@ import { Card, CardBody, CardTitle, CardText, Button } from "reactstrap";
 import { NavLink, useParams } from "react-router-dom";
 
 const ShowCard = () => {
+  const current = new Date();
+  const date = `${current.getDate()}/${
+    current.getMonth() + 1
+  }/${current.getFullYear()}`;
+
   const [showCard, setShowCard] = useState({});
   const getShowCard = () => {
     fetch("/showcard/")
@@ -16,6 +21,9 @@ const ShowCard = () => {
   if (showCard === null) {
     return (
       <>
+        <h3>Todays Date</h3>
+        <h3>{date}</h3>
+
         <div className="WorkoutShow">
           <Card>
             <CardBody>
@@ -33,6 +41,8 @@ const ShowCard = () => {
   } else {
     return (
       <>
+        <h3>Todays Date</h3>
+        <h3>{date}</h3>
         <div className="WorkoutShow">
           <h3>Latest workout</h3>
           <Card>
