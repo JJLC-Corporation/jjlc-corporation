@@ -22,8 +22,8 @@ const WorkoutShow = ({ workouts, deleteWorkout }) => {
         <Card style={{ width: '25rem', height: '25rem' }} >
           <CardBody>
             <CardTitle tag="h5" className="card-t">{workout.name}</CardTitle>
-            <CardText><b>SetsxReps:</b> {workout.set_reps}</CardText>
-            <CardText><b>Weight:</b> {workout.weight}lbs</CardText>
+            <CardText className="show-info"><b>SetsxReps:</b> {workout.set_reps}</CardText>
+            <CardText className="show-info"><b>Weight:</b> {workout.weight}lbs</CardText>
               <div className="b-style">
                 <div className="edit-button">
                 <NavLink to={`/workoutedit/${workout.id}`} >
