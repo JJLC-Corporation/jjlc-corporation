@@ -14,6 +14,7 @@ const WorkoutShow = ({ workouts, deleteWorkout }) => {
 
   return (
     <>
+    <div className="show-bg">
     <h1 className="show-title">
       <i><span className="my-title">MY</span> WORKOUT</i>
     </h1>
@@ -37,6 +38,7 @@ const WorkoutShow = ({ workouts, deleteWorkout }) => {
       <div className="div-padding">
         <img src="https://i.postimg.cc/L6vcPfgc/logo-1.png" className="about-logo"></img>
         </div>
+      </div>
     </>
   );
 };
