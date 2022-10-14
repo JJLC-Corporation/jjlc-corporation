@@ -386,8 +386,7 @@ a:hover {
     padding-top: 4rem;
     display: flex; 
     justify-content: center;
-    font-size: 200px;
-    font-size: 80px;
+    font-size: 120px;
     color: white;
     font-family: 'Anton', sans-serif;
     letter-spacing: 0.1em;
@@ -402,14 +401,23 @@ a:hover {
     grid-gap: 60px;
 }
 
+
 .workout{
     background-color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .index-background{
     background-color: #E6F2F2;
 }
 
+.index-b{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
 .plan{
     color: #FF1B1C;
     

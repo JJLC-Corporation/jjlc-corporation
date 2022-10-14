@@ -18,30 +18,35 @@ const WorkoutIndex = ({workouts, current_user }) => {
             }}
           >
             <CardHeader className="workout">
-              Workout
+              <b>Workout</b>
             </CardHeader>
               <ListGroup>
-                <ListGroupItem className="list-group-item">
-                  Name: {workout.name}
+                <ListGroupItem>
+                  <b>Name:</b> {workout.name}
                 </ListGroupItem>
                 <ListGroupItem>
-                  SetsxReps: {workout.set_reps}
+                  <b>SetsxReps:</b> {workout.set_reps}
                 </ListGroupItem>
                 <ListGroupItem>
-                  Weight: {workout.weight}lbs
+                  <b>Weight:</b> {workout.weight}lbs
                 </ListGroupItem>
                 <ListGroupItem>
+                  <div className="index-b">
                   <Button color="danger">
                     <NavLink to={`/workoutshow/${workout.id}`}>
                     See Workout
                     </NavLink>
                   </Button>
+                  </div>
                 </ListGroupItem> 
               </ListGroup>
           </Card>
         )
       })}
       </div>
+        <div className="div-padding">
+        <img src="https://i.postimg.cc/L6vcPfgc/logo-1.png" className="about-logo"></img>
+        </div>
       </div>
     </>
   )
