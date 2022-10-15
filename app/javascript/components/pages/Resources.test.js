@@ -5,7 +5,7 @@ import Resources from './Resources'
 describe("<Resources />", () => {
     it('renders the Resources page without error', () => {
         render( <Resources /> )
-        const ResourceText = screen.getByText(/Workout Resources/i)
+        const ResourceText = screen.getByText(/RESOURCES/i)
         expect(ResourceText).toBeInTheDocument()
     })
 })
