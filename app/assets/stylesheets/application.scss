@@ -18,19 +18,27 @@ main {
 /* unprotected resources */
 
 .r-background {
-    background-color: #E6F2F2;
+    background-color: black;
+    min-height: 100vh;
+}
+
+.r-components{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding-top: 40px;
+   
+    
 }
 
 .r-header {
-    font-size: 60px;
+    font-size: 100px;
     text-align: center;
     font-weight: bold;
     padding: 50px;
-}
-
-.r-resources {
-    padding: 50px;
-
+    color: #BEB7A4;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.1em;
 }
 
 a {
@@ -38,12 +46,42 @@ a {
 
 }
 
-.r-stretches {
-    padding-top: 40px;
+.stretches{
+    background-color:white;
+    height: 25rem;
+    width:20rem;
+    padding-left:40px;
+    padding-right:40px;
+    padding-top:30px;font-family: 'Roboto', sans-serif;
+    
 }
 
-.accordion {
-    padding: 40px;
+.alt-work{
+    background-color:white;
+    height: 25rem;
+    width:20rem;
+    padding-left:40px;
+    padding-right:40px;
+    padding-top:30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.how-to{
+    background-color:white;
+    height: 25rem;
+    width:20rem;
+    padding-left:40px;
+    padding-right:40px;
+    padding-top:30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.r-subtitle{
+    display: flex;
+    justify-content:center;
+    font-family: 'Anton', sans-serif;
+    font-style: italic;
+    color: #FF1B1C;
 }
 
 .footer {
