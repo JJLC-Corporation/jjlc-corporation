@@ -1,12 +1,21 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { 
+    faRightToBracket,
+    faUserPlus,
+    faPaperclip, 
+    faPeopleGroup,
+    faDumbbell,
+    faFileCirclePlus
+} from "@fortawesome/free-solid-svg-icons";
 import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
 } from "reactstrap";
 
 const Navigation = ({
@@ -24,7 +33,7 @@ const Navigation = ({
     <>
       {!logged_in && (
         <div>
-          <Navbar color="faded" light>
+          <Navbar className="unpro-nav" light>
             <NavbarBrand href="/" className="me-auto">
               <span className="lift-title">
                 <i>.LIFT</i>
@@ -34,16 +43,16 @@ const Navigation = ({
             <Collapse isOpen={!collapsed} navbar>
               <Nav navbar>
                 <NavLink href={sign_in_route} className="nav-link">
-                  Login
+                <FontAwesomeIcon icon={faRightToBracket}/> Login
                 </NavLink>
                 <NavLink href={new_user_route} className="nav-link">
-                  Sign Up
+                <FontAwesomeIcon icon={faUserPlus} /> Sign Up
                 </NavLink>
                 <NavLink href="/resources" className="nav-link">
-                  Workout Resources
+                <FontAwesomeIcon icon={faPaperclip} /> Workout Resources
                 </NavLink>
                 <NavLink href="/aboutus" className="nav-link">
-                  Meet The Team
+                <FontAwesomeIcon icon={faPeopleGroup} /> Meet The Team
                 </NavLink>
               </Nav>
             </Collapse>
@@ -52,7 +61,7 @@ const Navigation = ({
       )}
       {logged_in && (
         <div>
-          <Navbar color="faded" light>
+          <Navbar color="faded" className="unpro-nav" light>
             <NavbarBrand href="/dashboard" className="me-auto">
               <span className="lift-title">
                 <i>.LIFT</i>
@@ -62,16 +71,16 @@ const Navigation = ({
             <Collapse isOpen={!collapsed} navbar>
               <Nav navbar>
                 <NavLink href="/workoutindex" className="nav-link">
-                  Workout Plan
+                <FontAwesomeIcon icon={faDumbbell} /> Workout Plan
                 </NavLink>
                 <NavLink href="/workoutnew" className="nav-link">
-                  Add a New Workout
+                <FontAwesomeIcon icon={faFileCirclePlus} /> Add a New Workout
                 </NavLink>
                 <NavLink href="/resources" className="nav-link">
-                  Workout Resources
+                <FontAwesomeIcon icon={faPaperclip} /> Workout Resources
                 </NavLink>
                 <NavLink href={sign_out_route} className="nav-link">
-                  Log Out
+                <FontAwesomeIcon icon={faRightToBracket}/> Log Out
                 </NavLink>
               </Nav>
             </Collapse>
