@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import {Button} from 'reactstrap'
 
 
 const QuoteComp = () => {
@@ -28,13 +29,13 @@ const QuoteComp = () => {
 
 return (
     <>
-            <div className = "quote-box">
+            <div className = "q-box-style">
                 <div className="quote-text">
                     <p>{quote}</p>
                 </div>
                 <div className="author"><p>{author}</p></div>
                     <div className="quote-buttons">
-                        <button onClick={handleClick} className="new-quote">New Quote</button>
+                        <Button onClick={handleClick} className="new-quote" color="danger">New Quote</Button>
                     </div>
         </div>
     </>

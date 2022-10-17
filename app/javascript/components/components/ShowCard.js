@@ -44,14 +44,14 @@ const ShowCard = () => {
       <>
         <div className="workout-dash-card">
           <h3 className="show-card-title"><i>LATEST WORKOUT</i></h3>
-          <Card style={{ width: "25rem", height: "35rem" }}>
+          <Card style={{ width: "25rem", height: "37rem" }}>
           <img
                 alt="gym"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXrVfZyZAVg29rOUPfFvKCq9mFXm_ccztmCQ&usqp=CAU"
+                src="../photos/citygym.jpg"
               />
             <CardBody>
               <CardTitle tag="h5" className="card-t">{showCard.name}</CardTitle>
-              <CardText className="show-info">Sets x Reps {showCard.set_reps}</CardText>
+              <CardText className="show-info">Sets x Reps: {showCard.set_reps}</CardText>
               <CardText className="show-info">Weight: {showCard.weight}</CardText>
               <NavLink to={`/workoutedit/${showCard.id}`} className="nav-link">
                 <Button color="danger">Edit Workout</Button>
