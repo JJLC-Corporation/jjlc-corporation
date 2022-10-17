@@ -6,7 +6,6 @@ const WorkoutIndex = ({ workouts, current_user }) => {
   const filteredWorkouts = workouts?.filter(
     (workout) => workout.user_id === current_user.id
   );
-  console.log(workouts);
   return (
     <>
       <div className="index-background">
