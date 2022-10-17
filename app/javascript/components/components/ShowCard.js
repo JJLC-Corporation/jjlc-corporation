@@ -41,21 +41,19 @@ const ShowCard = () => {
   } else {
     return (
       <>
-        <h3>Todays Date</h3>
-        <h3>{date}</h3>
-        <div className="WorkoutShow">
-          <h3>Latest workout</h3>
-          <Card>
+        <div className="workout-dash-card">
+          <h3>LATEST WORKOUT</h3>
+          <Card style={{ width: "25rem", height: "25rem" }}>
             <CardBody>
-              <CardTitle tag="h5">{showCard.name}</CardTitle>
-              <CardText>Sets x Reps {showCard.set_reps}</CardText>
-              <CardText>Weight: {showCard.weight}</CardText>
+              <CardTitle tag="h5" className="card-t">{showCard.name}</CardTitle>
+              <CardText className="show-info">Sets x Reps {showCard.set_reps}</CardText>
+              <CardText className="show-info">Weight: {showCard.weight}</CardText>
               <NavLink to={`/workoutedit/${showCard.id}`} className="nav-link">
-                <Button>Edit Workout</Button>
+                <Button color="danger">Edit Workout</Button>
               </NavLink>
             </CardBody>
           </Card>
-        </div>
+          </div>
       </>
     );
   }
