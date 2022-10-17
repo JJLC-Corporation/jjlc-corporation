@@ -89,6 +89,10 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #FF1B1C;
 }
 
 
@@ -407,8 +411,12 @@ a:hover {
     display: flex;
     justify-content: center;
     color: black;
-    background: #E6F2F2;
     height: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #FF1B1C;
+
 }
 
 
@@ -700,4 +708,9 @@ body {
 
 .unpro-nav{
     background-color: #FF1B1C;
+}
+
+a:hover {
+    text-decoration: none;
+    color:black
 }
