@@ -19,15 +19,9 @@ const Dashboard = (props) => {
 
   return (
     <>
-      <div className="div-padding">
-        <img
-          src="https://i.postimg.cc/L6vcPfgc/logo-1.png"
-          className="about-logo"
-        ></img>
-      </div>
       <div className="dash-header">
         <h1 className="d-header-styling">
-          <i>{`WELCOME ${props.current_user.name}! IT'S TIME TO .LIFT`}</i>
+          <i>{`WELCOME TO .LIFT ${props.current_user.name}!`}</i>
         </h1>
       </div>
       <div className="comp-arrange">
@@ -38,10 +32,10 @@ const Dashboard = (props) => {
                 width: "18rem",
               }}
             >
-              <img
-                alt="gym"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXrVfZyZAVg29rOUPfFvKCq9mFXm_ccztmCQ&usqp=CAU"
-              />
+              {/* <img
+                alt="calendar"
+                src="../photos/schedule.png"
+              /> */}
               <CardBody>
                 <CardTitle tag="h5">Today's Date</CardTitle>
                 <CardText>{date}</CardText>
@@ -51,6 +45,12 @@ const Dashboard = (props) => {
           <QuoteComp />
         </div>
         <ShowCard />
+      </div>
+      <div className="div-padding">
+        <img
+          src="https://i.postimg.cc/L6vcPfgc/logo-1.png"
+          className="about-logo"
+        ></img>
       </div>
     </>
   );

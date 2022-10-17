@@ -25,7 +25,11 @@ const ShowCard = () => {
         <h3>{date}</h3>
 
         <div className="WorkoutShow">
-          <Card>
+          <Card style={{ width: "25rem", height: "35rem" }}>
+          <img
+                alt="gym"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXrVfZyZAVg29rOUPfFvKCq9mFXm_ccztmCQ&usqp=CAU"
+              />
             <CardBody>
               <CardTitle className="null-card" tag="h5">
                 Please add a workout
@@ -42,8 +46,12 @@ const ShowCard = () => {
     return (
       <>
         <div className="workout-dash-card">
-          <h3>LATEST WORKOUT</h3>
-          <Card style={{ width: "25rem", height: "25rem" }}>
+          <h3 className="show-card-title"><i>LATEST WORKOUT</i></h3>
+          <Card style={{ width: "25rem", height: "35rem" }}>
+          <img
+                alt="gym"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXrVfZyZAVg29rOUPfFvKCq9mFXm_ccztmCQ&usqp=CAU"
+              />
             <CardBody>
               <CardTitle tag="h5" className="card-t">{showCard.name}</CardTitle>
               <CardText className="show-info">Sets x Reps {showCard.set_reps}</CardText>
