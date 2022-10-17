@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ShowCard from "../components/ShowCard";
 import QuoteComp from "../components/QuoteComp";
-import { Card, CardBody, CardTitle, CardText, Button } from "reactstrap";
+import { Card, CardBody, CardTitle, CardText, Button, NavLink } from "reactstrap";
 import { faCalendarDays } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -46,9 +46,11 @@ const Dashboard = (props) => {
             </Card>
           </div>
           <div className="dash-resource">
+          <NavLink href="/resources">
           <Button color="secondary">
               Workout Resouces 
             </Button>
+              </NavLink>
             </div>
           <QuoteComp />
         </div>
