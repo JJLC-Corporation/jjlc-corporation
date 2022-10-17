@@ -75,12 +75,6 @@
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
 
-## Architecture 
-
-
-
-
-
 ## Contributors
 
 - **Project Manager - Joyce Magistrado** - [LinkedIn](https://www.linkedin.com/in/joyce-magistrado/) - [GitHub](https://github.com/jmagistrado)
