@@ -21,17 +21,18 @@ const ShowCard = () => {
   if (showCard === null) {
     return (
       <>
-        <h3>Todays Date</h3>
-        <h3>{date}</h3>
-
         <div className="WorkoutShow">
-          <Card>
+          <Card style={{ width: "25rem", height: "35rem" }}>
+          <img
+                alt="gym"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXrVfZyZAVg29rOUPfFvKCq9mFXm_ccztmCQ&usqp=CAU"
+              />
             <CardBody>
               <CardTitle className="null-card" tag="h5">
-                Please add a workout
+                Add A Workout Here
               </CardTitle>
               <NavLink to={`/workoutnew`} className="nav-link">
-                <Button>Add a Workout</Button>
+                <div className="null-card"><Button color="danger">Add a Workout</Button></div>
               </NavLink>
             </CardBody>
           </Card>
@@ -41,21 +42,23 @@ const ShowCard = () => {
   } else {
     return (
       <>
-        <h3>Todays Date</h3>
-        <h3>{date}</h3>
-        <div className="WorkoutShow">
-          <h3>Latest workout</h3>
-          <Card>
+        <div className="workout-dash-card">
+          <h3 className="show-card-title"><i>LATEST WORKOUT</i></h3>
+          <Card style={{ width: "25rem", height: "37rem" }}>
+          <img
+                alt="gym"
+                src="../photos/citygym.jpg"
+              />
             <CardBody>
-              <CardTitle tag="h5">{showCard.name}</CardTitle>
-              <CardText>Sets x Reps {showCard.set_reps}</CardText>
-              <CardText>Weight: {showCard.weight}</CardText>
+              <CardTitle tag="h5" className="card-t">{showCard.name}</CardTitle>
+              <CardText className="show-info">Sets x Reps: {showCard.set_reps}</CardText>
+              <CardText className="show-info">Weight: {showCard.weight}</CardText>
               <NavLink to={`/workoutedit/${showCard.id}`} className="nav-link">
-                <Button>Edit Workout</Button>
+                <Button color="danger">Edit Workout</Button>
               </NavLink>
             </CardBody>
           </Card>
-        </div>
+          </div>
       </>
     );
   }

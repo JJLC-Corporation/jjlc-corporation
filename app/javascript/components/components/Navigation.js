@@ -6,7 +6,8 @@ import {
     faPaperclip, 
     faPeopleGroup,
     faDumbbell,
-    faFileCirclePlus
+    faFileCirclePlus, 
+    faHouseChimney
 } from "@fortawesome/free-solid-svg-icons";
 import {
     Collapse,
@@ -34,14 +35,18 @@ const Navigation = ({
       {!logged_in && (
         <div>
           <Navbar className="unpro-nav" light>
-            <NavbarBrand href="/" className="me-auto">
-              <span className="lift-title">
+            <NavbarBrand href="/" className="me-auto" >
+              <img className="logo-sizing" src="../photos/logo.png"></img>
+              {/* <span className="lift-title">
                 <i>.LIFT</i>
-              </span>
+              </span> */}
             </NavbarBrand>
             <NavbarToggler onClick={toggleNavbar} className="me-2" />
             <Collapse isOpen={!collapsed} navbar>
               <Nav navbar>
+              <NavLink href="/" className="nav-link">
+                <FontAwesomeIcon icon={faHouseChimney} /> Home
+                </NavLink>
                 <NavLink href={sign_in_route} className="nav-link">
                 <FontAwesomeIcon icon={faRightToBracket}/> Login
                 </NavLink>
@@ -62,14 +67,18 @@ const Navigation = ({
       {logged_in && (
         <div>
           <Navbar color="faded" className="unpro-nav" light>
-            <NavbarBrand href="/dashboard" className="me-auto">
-              <span className="lift-title">
+            <NavbarBrand href="/" className="me-auto">
+            <img className="logo-sizing" src="../photos/logo.png"></img>
+              {/* <span className="lift-title">
                 <i>.LIFT</i>
-              </span>
+              </span> */}
             </NavbarBrand>
             <NavbarToggler onClick={toggleNavbar} className="me-2" />
             <Collapse isOpen={!collapsed} navbar>
               <Nav navbar>
+              <NavLink href="/dashboard" className="nav-link">
+                <FontAwesomeIcon icon={faHouseChimney} /> Dashboard
+                </NavLink>
                 <NavLink href="/workoutindex" className="nav-link">
                 <FontAwesomeIcon icon={faDumbbell} /> Workout Plan
                 </NavLink>
