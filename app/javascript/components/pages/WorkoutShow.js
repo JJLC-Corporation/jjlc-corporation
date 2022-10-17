@@ -9,7 +9,6 @@ const WorkoutShow = ({ workouts, deleteWorkout }) => {
 
   const handleDelete = () => {
     deleteWorkout(id);
-    console.log(workout);
   };
 
   return (

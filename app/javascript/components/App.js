@@ -22,9 +22,7 @@ const App = (props) => {
     readWorkout()
   }, [])
   
-  console.log(props)
   const createWorkout = (workouts) => {
-    console.log('workout object',workouts)
     fetch("/workouts", {
       body: JSON.stringify(workouts),
       headers: {

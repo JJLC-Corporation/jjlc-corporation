@@ -93,6 +93,7 @@ a {
     font-size: 20px;
     text-decoration: none;
     background-color: #FF1B1C;
+
 }
 
 
@@ -545,7 +546,7 @@ a:hover {
 }
 
 .new-bg {
-    background-color:#FF1B1C;
+    background-color:#e22424;
     min-height: 100vh;
 }
 
@@ -713,4 +714,19 @@ body {
 a:hover {
     text-decoration: none;
     color:black
+}
+
+.notfound {
+color:white;
+font-size: 100px;
+font-family: 'Anton', sans-serif;
+font-style: italic;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-image: url(../photos/gym.png);
+min-height: 100vh;
+background-size:cover;
+background-repeat: no-repeat;
 }

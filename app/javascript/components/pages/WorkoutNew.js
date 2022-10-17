@@ -27,7 +27,6 @@ const WorkoutNew = ({ createWorkout, logged_in, current_user }) => {
     createWorkout(newWorkout);
     navigate("/workoutindex");
   };
-  console.log("workoutnew", current_user);
   return (
     <>
       <div className="new-bg">
