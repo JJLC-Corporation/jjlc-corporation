@@ -35,10 +35,11 @@ const Navigation = ({
       {!logged_in && (
         <div>
           <Navbar className="unpro-nav" light>
-            <NavbarBrand href="/" className="me-auto">
-              <span className="lift-title">
+            <NavbarBrand href="/" className="me-auto" >
+              <img className="logo-sizing" src="../photos/logo.png"></img>
+              {/* <span className="lift-title">
                 <i>.LIFT</i>
-              </span>
+              </span> */}
             </NavbarBrand>
             <NavbarToggler onClick={toggleNavbar} className="me-2" />
             <Collapse isOpen={!collapsed} navbar>
@@ -67,9 +68,10 @@ const Navigation = ({
         <div>
           <Navbar color="faded" className="unpro-nav" light>
             <NavbarBrand href="/" className="me-auto">
-              <span className="lift-title">
+            <img className="logo-sizing" src="../photos/logo.png"></img>
+              {/* <span className="lift-title">
                 <i>.LIFT</i>
-              </span>
+              </span> */}
             </NavbarBrand>
             <NavbarToggler onClick={toggleNavbar} className="me-2" />
             <Collapse isOpen={!collapsed} navbar>
