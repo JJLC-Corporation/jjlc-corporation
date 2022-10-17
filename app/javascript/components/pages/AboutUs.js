@@ -42,16 +42,8 @@ const items = [
     altText: "Project Manager",
     caption: "Joyce Magistrado",
     key: 2,
-    linkedin: (
-      <a href="https://www.linkedin.com/in/joyce-magistrado" target="blank">
-        linkedin
-      </a>
-    ),
-    GitHub: (
-      <a href="https://github.com/jmagistrado" target="blank">
-        GitHub
-      </a>
-    ),
+    linkedin: "https://www.linkedin.com/in/joyce-magistrado",
+    GitHub: "https://github.com/jmagistrado",
     description:
       "Full Stack Web Developer with a strong Customer Success background. Passionate about technology, client experience, leadership, and representation of women in STEM. I have experience with JavaScript, React, Ruby, Rails, and SQL. I hope to bring my extensive understanding of client needs and technical skills together to contribute to the overall client experience in a more impactful way by focusing on developing web applications.",
   },
@@ -60,8 +52,8 @@ const items = [
     altText: "Tech Lead",
     caption: "Cody Mundy",
     key: 3,
-    linkedin: <a href=" https://www.linkedin.com/in/cody-l-mundy/">linkedin</a>,
-    GitHub: <a href="https://github.com/HeavyArms0511">GitHub</a>,
+    linkedin:" https://www.linkedin.com/in/cody-l-mundy/",
+    GitHub: "https://github.com/HeavyArms0511",
     description:
       "Hey! My name is Cody Mundy and I’m a Full-Stack Web Developer. I am a veteran who served in the United States Army and enjoy spending my time coding, going to the gym, and playing video games. I am passionate about all forms of technology and enjoy writing code and improving my knowledge every day. On days that I’m not working or playing games I spend time with my horse of a dog Tank who is a Great Dane.",
   },
@@ -70,8 +62,8 @@ const items = [
     altText: "Design Lead",
     caption: "Jason Brown",
     key: 4,
-    linkedin: <a href="github.com/jayaries329@yahoo.com ">linkedin</a>,
-    GitHub: <a href="https://github.com/VenessaSP">GitHub</a>,
+    linkedin:"https://www.linkedin.com/in/jason-brown-6b4707b",
+    GitHub: "https://github.com/jayaries329",
     description:
       "Full stack software developer who's self-driven and passionate about cutting edge technologies. Problem solver and fast learner with strong interpersonal communication skills. Experienced team player that leads by example with a purpose of inspiring and teaching others. Resourceful and proactive developer highly focused on developing quality product with strict attention to detail.",
   },
