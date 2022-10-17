@@ -21,9 +21,6 @@ const ShowCard = () => {
   if (showCard === null) {
     return (
       <>
-        <h3>Todays Date</h3>
-        <h3>{date}</h3>
-
         <div className="WorkoutShow">
           <Card style={{ width: "25rem", height: "35rem" }}>
           <img
@@ -32,10 +29,10 @@ const ShowCard = () => {
               />
             <CardBody>
               <CardTitle className="null-card" tag="h5">
-                Please add a workout
+                Add A Workout Here
               </CardTitle>
               <NavLink to={`/workoutnew`} className="nav-link">
-                <Button>Add a Workout</Button>
+                <div className="null-card"><Button color="danger">Add a Workout</Button></div>
               </NavLink>
             </CardBody>
           </Card>
