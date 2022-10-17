@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import ShowCard from "../components/ShowCard";
 import QuoteComp from "../components/QuoteComp";
 import { Card, CardBody, CardTitle, CardText, Button } from "reactstrap";
+import { faCalendarDays } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Dashboard = (props) => {
   const navigate = useNavigate();
@@ -37,11 +39,17 @@ const Dashboard = (props) => {
                 src="../photos/schedule.png"
               /> */}
               <CardBody>
-                <CardTitle tag="h5">Today's Date</CardTitle>
+                <CardTitle tag="h5">Today's Date <FontAwesomeIcon icon={faCalendarDays} /> 
+                </CardTitle>
                 <CardText>{date}</CardText>
               </CardBody>
             </Card>
           </div>
+          <div className="dash-resource">
+          <Button color="secondary">
+              Workout Resouces 
+            </Button>
+            </div>
           <QuoteComp />
         </div>
         <ShowCard />
